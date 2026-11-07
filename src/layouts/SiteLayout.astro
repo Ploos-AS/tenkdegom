@@ -1,19 +1,72 @@
 ---
 interface Props { title: string; description?: string }
 const { title, description = 'Praktiske og uavhengige råd om digitalt personvern.' } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+const navItems = [
+  { href: '/', label: 'Hjem' },
+  { href: '/laer/', label: 'Lær' },
+  { href: '/personvernsjekken/', label: 'Personvernsjekken' },
+  { href: '/om/', label: 'Om oss' }
+];
 ---
 <!doctype html>
 <html lang="nb">
 <head>
-<meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
-<meta name="description" content={description} /><title>{title} – Tenk deg om</title>
-<link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).toString()} />\n<meta property="og:type" content="website" />\n<meta property="og:locale" content="nb_NO" />\n<meta property="og:title" content={`${title} – Tenk deg om`} />\n<meta property="og:description" content={description} />\n<meta property="og:url" content={new URL(Astro.url.pathname, Astro.site).toString()} />\n<meta name="twitter:card" content="summary" />\n<link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-<style is:global>
-:root{font-family:system-ui,-apple-system,sans-serif;color:#193b30;background:#f7faf7}*{box-sizing:border-box}body{margin:0}a{color:#126047}a:hover{text-decoration-thickness:2px}a:focus-visible,button:focus-visible{outline:3px solid #a66500;outline-offset:3px}header,main,footer{max-width:1000px;margin:auto;padding:1.3rem}header{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;border-bottom:1px solid #d5e2da}header .brand{font-weight:800;font-size:1.3rem;text-decoration:none}nav{display:flex;gap:1rem;flex-wrap:wrap}main{min-height:65vh}h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.15}h2{margin-top:2rem}p,li{line-height:1.75}article{max-width:760px}article p{font-size:1.08rem}.lead{font-size:1.22rem;max-width:760px}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}.card{background:#fff;border:1px solid #d5e2da;border-radius:12px;padding:1.3rem}.card h2{font-size:1.25rem;margin-top:0}.button{display:inline-block;background:#126047;color:white;padding:.85rem 1.1rem;border-radius:8px;text-decoration:none;font-weight:700}footer{border-top:1px solid #d5e2da;color:#4a6055;font-size:.9rem;margin-top:3rem}.skip{position:absolute;left:-9999px}.skip:focus{left:1rem;top:1rem;background:white;padding:.7rem;z-index:10}.note{background:#e9f3ec;border-left:4px solid #126047;padding:1rem}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content={description} />
+  <title>{title} – Tenk deg om</title>
+  <link rel="canonical" href={canonical} />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="nb_NO" />
+  <meta property="og:title" content={`${title} – Tenk deg om`} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta name="twitter:card" content="summary" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  <style is:global>
+    :root{font-family:system-ui,-apple-system,sans-serif;color:#193b30;background:#f7faf7}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0}
+    a{color:#126047}a:hover{text-decoration-thickness:2px}
+    a:focus-visible,button:focus-visible{outline:3px solid #a66500;outline-offset:3px}
+    .site-header,.site-main,.site-footer{max-width:1080px;margin:auto;padding:1.3rem}
+    .site-header{display:flex;justify-content:space-between;align-items:center;gap:1.2rem;flex-wrap:wrap;border-bottom:1px solid #d5e2da}
+    .brand{display:inline-flex;align-items:center;gap:.7rem;font-weight:800;font-size:1.3rem;text-decoration:none;color:#193b30}
+    .brand-mark{display:grid;place-items:center;width:2.25rem;height:2.25rem;border-radius:11px;background:#126047;color:white;font-weight:900;font-size:1.25rem}
+    .site-nav{display:flex;gap:.25rem;flex-wrap:wrap}
+    .site-nav a{padding:.55rem .75rem;border-radius:8px;text-decoration:none;font-weight:600;color:#193b30}
+    .site-nav a:hover,.site-nav a[aria-current="page"]{background:#e1eee6;color:#10533e}
+    .site-main{min-height:65vh}
+    h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.15;letter-spacing:-.035em}
+    h2{margin-top:2rem}p,li{line-height:1.75}article{max-width:760px}article p{font-size:1.08rem}
+    .lead{font-size:1.22rem;max-width:760px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+    .card{background:#fff;border:1px solid #d5e2da;border-radius:12px;padding:1.3rem}
+    .card h2{font-size:1.25rem;margin-top:0}
+    .button{display:inline-block;background:#126047;color:white;padding:.85rem 1.1rem;border-radius:8px;text-decoration:none;font-weight:700}
+    .button:hover{background:#0d4e39}
+    .site-footer{border-top:1px solid #d5e2da;color:#4a6055;font-size:.9rem;margin-top:3rem}
+    .skip{position:absolute;left:-9999px}.skip:focus{left:1rem;top:1rem;background:white;padding:.7rem;z-index:10}
+    .note{background:#e9f3ec;border-left:4px solid #126047;padding:1rem}
+    .featured-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+    .featured-card{display:block;padding:1.4rem;background:#fff;border:1px solid #d5e2da;border-radius:12px;text-decoration:none;color:inherit;transition:border-color .15s,transform .15s}
+    .featured-card:hover{border-color:#126047;transform:translateY(-2px)}
+    .featured-card h3{margin:.35rem 0 .5rem;font-size:1.18rem;color:#126047}
+    .featured-card p{margin:0;color:#4a6055}
+    .eyebrow{font-size:.82rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#126047}
+    @media(max-width:650px){.site-header,.site-main,.site-footer{padding:1rem}.site-nav{width:100%;gap:.1rem}.site-nav a{padding:.5rem .6rem;font-size:.93rem}h1{letter-spacing:-.025em}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.featured-card{transition:none}}
+  </style>
 </head>
-<body><a class="skip" href="#innhold">Hopp til innhold</a>
-<header><a class="brand" href="/">Tenk deg om.</a><nav aria-label="Hovedmeny"><a href="/laer/">Lær</a><a href="/personvernsjekken/">Personvernsjekken</a><a href="/om/">Om oss</a></nav></header>
-<main id="innhold"><slot /></main>
-<footer>Utgitt av Ploos AS · Folkeopplysning først · <a href="/om/">Redaksjonelle prinsipper</a> · <a href="/personvern/">Personvern på nettstedet</a></footer>
-</body></html>
+<body>
+<a class="skip" href="#innhold">Hopp til innhold</a>
+<header class="site-header">
+  <a class="brand" href="/" aria-label="Tenk deg om – til forsiden"><span class="brand-mark" aria-hidden="true">?</span><span>Tenk deg om.</span></a>
+  <nav class="site-nav" aria-label="Hovedmeny">
+    {navItems.map(item => <a href={item.href} aria-current={Astro.url.pathname === item.href ? 'page' : undefined}>{item.label}</a>)}
+  </nav>
+</header>
+<main class="site-main" id="innhold"><slot /></main>
+<footer class="site-footer">Utgitt av Ploos AS · Folkeopplysning først · <a href="/om/">Redaksjonelle prinsipper</a> · <a href="/personvern/">Personvern på nettstedet</a></footer>
+</body>
+</html>
