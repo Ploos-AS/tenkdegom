@@ -1,1 +1,66 @@
-<!doctype html><html lang="nb"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Personvernsjekken – Tenk deg om</title></head><body style="font:1.1rem/1.7 system-ui;max-width:720px;margin:3rem auto;padding:1rem"><a href="/">← Forsiden</a><h1>Personvernsjekken</h1><p>Vi utvikler en gratis sjekk med konkrete personvernråd. Svarene skal behandles lokalt i nettleseren, uten konto eller lagring på serveren.</p><p>Verktøyet er ennå ikke klart.</p></body></html>
+---
+import { questions } from '../../data/privacy-questions';
+---
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Gratis personvernsjekk. Svarene forblir i nettleseren din." />
+<title>Personvernsjekken – Tenk deg om</title>
+<style>
+:root{font-family:system-ui,sans-serif;color:#173c30;background:#f7faf7}*{box-sizing:border-box}body{margin:0}header,main,footer{max-width:840px;margin:auto;padding:1.3rem}h1{font-size:clamp(2rem,6vw,3rem)}p,li{line-height:1.6}fieldset{background:white;border:1px solid #cbdcd1;border-radius:12px;margin:1rem 0;padding:1.1rem}legend{font-weight:700;padding:.3rem}label{display:inline-flex;align-items:center;gap:.4rem;margin:.4rem 1rem .4rem 0;cursor:pointer}input{accent-color:#176249}button{border:0;border-radius:8px;padding:.8rem 1.1rem;background:#176249;color:white;font:inherit;cursor:pointer;margin:.4rem .5rem .4rem 0}button.secondary{background:#dcebe2;color:#173c30}a{color:#176249}.notice{padding:1rem;background:#e7f2ea;border-left:4px solid #176249}.error{color:#9c2424;font-weight:700}#results{margin-top:2rem}button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid #b26b0b;outline-offset:3px}@media print{header,footer,form,.actions{display:none!important}body{background:white}}
+</style>
+</head>
+<body>
+<header><a href="/">← Tenk deg om</a></header>
+<main>
+<h1>Personvernsjekken</h1>
+<p>12 spørsmål om e-post, nettleser, passord, apper, skylagring og KI. Få en praktisk handlingsplan.</p>
+<p class="notice"><strong>Personvern:</strong> Svarene behandles bare i nettleseren din. De sendes ikke til serveren og lagres ikke. PDF/utskrift håndteres av nettleseren.</p>
+<form id="check" novalidate>
+{questions.map((q,i)=><fieldset><legend>{i+1}. {q.prompt}</legend><p>{q.category}</p><label><input type="radio" name={`q${i}`} value="yes" required /> Ja</label><label><input type="radio" name={`q${i}`} value="sometimes" /> Delvis / usikker</label><label><input type="radio" name={`q${i}`} value="no" /> Nei</label></fieldset>)}
+<p id="validation" class="error" role="alert" hidden></p>
+<button type="submit">Se mine råd</button><button type="reset" class="secondary">Nullstill</button>
+</form>
+<section id="results" hidden tabindex="-1" aria-live="polite">
+<h2>Din handlingsplan</h2><p id="summary"></p>
+<h3>Dette kan du forbedre</h3><ol id="advice"></ol>
+<p id="allgood" hidden>Du svarte ja på alle spørsmål. Fortsett å holde programvaren oppdatert og gjennomgå innstillingene jevnlig.</p>
+<div class="actions"><button type="button" id="print">Skriv ut / lagre som PDF</button><button type="button" id="again" class="secondary">Endre svar</button></div>
+<p>Dette er en veiledende egenvurdering, ikke en sikkerhetsrevisjon.</p>
+</section>
+</main>
+<footer>Utgitt av Ploos AS · <a href="/om/">Om prosjektet</a></footer>
+<script>
+import { questions } from '../../data/privacy-questions';
+const form=document.querySelector<HTMLFormElement>('#check')!;
+const results=document.querySelector<HTMLElement>('#results')!;
+const validation=document.querySelector<HTMLElement>('#validation')!;
+const advice=document.querySelector<HTMLOListElement>('#advice')!;
+const summary=document.querySelector<HTMLElement>('#summary')!;
+const allgood=document.querySelector<HTMLElement>('#allgood')!;
+form.addEventListener('submit',event=>{
+ event.preventDefault();
+ const answers=questions.map((_,i)=>form.querySelector<HTMLInputElement>('input[name="q'+i+'"]:checked')?.value);
+ const missing=answers.findIndex(value=>!value);
+ if(missing!==-1){validation.hidden=false;validation.textContent='Svar på alle spørsmål før du fortsetter.';form.querySelector<HTMLInputElement>('input[name="q'+missing+'"]')?.focus();results.hidden=true;return;}
+ validation.hidden=true;
+ const count=answers.filter(a=>a==='yes').length;
+ summary.textContent='Du svarte ja på '+count+' av '+questions.length+' spørsmål. Rådene er sortert etter svarene dine.';
+ advice.replaceChildren();
+ for(const priority of ['no','sometimes']){
+  questions.forEach((q,i)=>{
+   if(answers[i]!==priority)return;
+   const li=document.createElement('li');
+   const strong=document.createElement('strong');strong.textContent=q.category+': ';
+   li.append(strong,document.createTextNode(q.advice));advice.append(li);
+  });
+ }
+ allgood.hidden=advice.childElementCount!==0;
+ results.hidden=false;results.focus();
+});
+form.addEventListener('reset',()=>{results.hidden=true;validation.hidden=true;advice.replaceChildren();});
+document.querySelector<HTMLButtonElement>('#print')!.addEventListener('click',()=>window.print());
+document.querySelector<HTMLButtonElement>('#again')!.addEventListener('click',()=>{form.querySelector<HTMLInputElement>('input')?.focus();window.scrollTo({top:0,behavior:'smooth'});});
+</script>
+</body></html>
