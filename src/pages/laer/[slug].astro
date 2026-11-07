@@ -6,6 +6,7 @@ const { article } = Astro.props;
 ---
 <SiteLayout title={article.title} description={article.intro}>
 <article><p><a href="/laer/">← Alle artikler</a></p><h1>{article.title}</h1><p class="lead">{article.intro}</p>
+<p class="note">Publisert: <time datetime={article.publishedAt}>{new Intl.DateTimeFormat("nb-NO",{dateStyle:"long",timeZone:"UTC"}).format(new Date(`${article.publishedAt}T12:00:00Z`))}</time> · Sist oppdatert: <time datetime={article.updatedAt}>{new Intl.DateTimeFormat("nb-NO",{dateStyle:"long",timeZone:"UTC"}).format(new Date(`${article.updatedAt}T12:00:00Z`))}</time></p>
 {article.sections.map(([heading,body])=><section><h2>{heading}</h2><p>{body}</p></section>)}
 <h2>Les mer</h2><ul>{article.links.map(([label,url])=><li><a href={url}>{label}</a></li>)}</ul>
 <p class="note">Denne artikkelen gir generell veiledning. Kontroller aktuelle innstillinger og vilkår hos tjenesteleverandøren.</p>
