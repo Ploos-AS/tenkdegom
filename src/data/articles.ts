@@ -93,22 +93,13 @@ export const articles = [
     "title": "Hva deler du egentlig med KI-tjenester?",
     "intro": "En KI-samtale kan føles privat, men opplysningene behandles etter tjenestens egne vilkår.",
     "sections": [
-      [
-        "Tenk før du limer inn",
-        "Unngå å legge inn fødselsnummer, helseopplysninger, kundedata, passord eller fortrolige dokumenter uten et klart grunnlag og passende beskyttelse."
-      ],
-      [
-        "Innstillinger varierer",
-        "Noen tjenester tilbyr valg for lagring, bruk til modellforbedring og sletting. Undersøk hva som gjelder for kontoen og tjenesten du faktisk bruker."
-      ],
-      [
-        "Bruk eksempler i stedet",
-        "Bytt ut navn, adresser og andre identifiserende detaljer med oppdiktede eksempler når du ber om hjelp. Husk også at KI-svar kan være feil."
-      ],
-      [
-        "Et trygt eksempel på KI-bruk",
-        "I stedet for å lime inn en ekte kundehenvendelse med navn og telefonnummer, kan du skrive en anonymisert versjon med oppdiktede detaljer. Kontroller at kombinasjonen av opplysninger heller ikke identifiserer personen."
-      ]
+      ["Hva er kunstig intelligens (KI)?", "KI-tjenester kan hjelpe deg med tekst, bilder og spørsmål. Men når du skriver inn noe i en nettbasert tjeneste, kan opplysningene bli behandlet på leverandørens systemer. Ikke anta at en samtale er privat bare fordi den føles personlig."],
+      ["Tenk før du deler", "Ikke lim inn passord, fødselsnummer, helseopplysninger, konfidensielle kundedata eller dokumenter med personopplysninger uten at du har et klart behandlingsgrunnlag og har kontrollert tjenestens vilkår og sikkerhet. Vær også forsiktig med bilder, lydfiler og skjermbilder: de kan inneholde navn, ansikter eller annen informasjon."],
+      ["Lagring, modelltrening og sletting er forskjellige ting", "Samtalehistorikk betyr at en tjeneste kan lagre samtalen slik at du finner den igjen. Bruk til modelltrening betyr at innhold kan brukes til å utvikle eller forbedre modeller, dersom tjenestens vilkår åpner for det. Sletting fra din historikk betyr ikke nødvendigvis at alle kopier eller sikkerhetslogger forsvinner umiddelbart. Undersøk disse tre forholdene hver for seg."],
+      ["Sjekk innstillingene dine", "Åpne KI-tjenestens konto- eller personverninnstillinger. Se etter valg for samtalehistorikk, bruk av data til modellforbedring, midlertidige samtaler, eksport og sletting. Les hva valgene faktisk gjør. Innstillinger og standardvalg varierer mellom tjenester, kontotyper og tidspunkter."],
+      ["Bruk oppdiktede eksempler", "I stedet for å lime inn «Kari Nordmann, født …, klaget på faktura 1234», kan du skrive «En kunde mener en faktura er feil. Hjelp meg å formulere et høflig svar uten personopplysninger». Bytt også ut indirekte identifikatorer, som sjeldne stillingstitler, eksakte datoer og detaljer om små steder."],
+      ["Når du bruker KI på jobb", "Avklar arbeidsgivers rutiner før du legger inn kundeinformasjon, interne dokumenter eller andre opplysninger som ikke er offentlige. Undersøk hvem som er behandlingsansvarlig, om tjenesten krever databehandleravtale, og om opplysninger kan overføres til andre land. Gratis- og bedriftsversjoner kan ha ulike vilkår."],
+      ["En kontroll på fem minutter", "1. Åpne personverninnstillingene i KI-tjenesten du bruker mest. 2. Finn ut om samtaler lagres og kan brukes til modellforbedring. 3. Se etter eksport- og slettevalg. 4. Prøv neste spørsmål med et oppdiktet eksempel. Kontroller alltid KI-svar mot pålitelige kilder før du handler."]
     ],
     "links": [
       [
