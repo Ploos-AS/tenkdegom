@@ -2,4 +2,4 @@
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import { articles } from '../../data/articles';
 ---
-<SiteLayout title="Lær om personvern"><h1>Lær om personvern</h1><p class="lead">Fem korte, praktiske introduksjoner. Vi oppdaterer innholdet etter hvert som tjenester og råd endrer seg.</p><div class="cards">{articles.map(a=><article class="card"><h2><a href={`/laer/${a.slug}/`}>{a.title}</a></h2><p>{a.intro}</p></article>)}</div></SiteLayout>
+<SiteLayout title="Lær om personvern" description="Les fem gratis guider om digitalt personvern, kontosikkerhet, sporing og KI – med praktiske råd du kan bruke med én gang."><h1>Lær om personvern</h1><p class="lead">Fem korte, praktiske introduksjoner. Vi oppdaterer innholdet etter hvert som tjenester og råd endrer seg.</p><div class="cards">{articles.map(a=><article class="card"><h2><a href={`/laer/${a.slug}/`}>{a.title}</a></h2><p>{a.intro}</p></article>)}</div></SiteLayout>
