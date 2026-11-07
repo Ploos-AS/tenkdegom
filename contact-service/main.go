@@ -139,6 +139,11 @@ func main(){
   if len(name)>120||len(reply)>254||len(message)<10||len(message)>5000||strings.ContainsAny(reply,"\r\n") {http.Error(w,"Invalid fields",400);return}
   parsed,err:=mail.ParseAddress(reply);if err!=nil||parsed.Address!=reply{http.Error(w,"Invalid email",400);return}
   ip,_,_:=net.SplitHostPort(r.RemoteAddr)
+  // Trust Caddy's forwarded client IP only for connections from loopback.
+  if parsed:=net.ParseIP(ip);parsed!=nil&&parsed.IsLoopback(){
+   forwarded:=strings.TrimSpace(strings.Split(r.Header.Get("X-Forwarded-For"),",")[0])
+   if candidate:=net.ParseIP(forwarded);candidate!=nil{ip=candidate.String()}
+  }
   if limited(ip){http.Error(w,"Too many requests",429);return}
   if !verifySolution(r.PostForm.Get("altcha")){http.Error(w,"Bot verification failed",403);return}
   if err:=sendMail(host,user,password,to,name,reply,message);err!=nil{log.Printf("SMTP delivery failed: %s",smtpFailureDetail(err));http.Error(w,"Delivery failed",502);return}
