@@ -11,10 +11,11 @@ import SiteLayout from '../layouts/SiteLayout.astro';
 <label for="email">E-postadresse <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" required />
 <label for="message">Melding <span aria-hidden="true">*</span></label><textarea id="message" name="message" rows="7" minlength="10" maxlength="5000" required></textarea>
 <div class="trap" aria-hidden="true"><label for="website">Nettside</label><input id="website" name="website" tabindex="-1" autocomplete="off" /></div>
+<p id="botstatus" role="status" aria-live="polite">Botkontroll utføres når du sender.</p>
 <button type="submit" id="send">Send melding</button>
 <p id="feedback" role="status" aria-live="polite"></p>
 </form>
-<p class="note">Ingen tredjeparts-CAPTCHA eller analyseverktøy. Innsending krever JavaScript; skjemaet fungerer også med vanlig POST, men gir da et enkelt serversvar.</p>
+<p class="note">Ingen tredjeparts-CAPTCHA eller analyseverktøy. Botkontrollen utføres lokalt i nettleseren og krever JavaScript.</p>
 </article>
 <style>
 form{display:grid;gap:.6rem;max-width:640px}label{font-weight:700;margin-top:.7rem}input,textarea{width:100%;padding:.8rem;border:1px solid #91a99b;border-radius:8px;font:inherit;background:#fff;color:#193b30}input:focus-visible,textarea:focus-visible{outline:3px solid #a66500;outline-offset:2px}button{justify-self:start;border:0;background:#126047;color:#fff;padding:.8rem 1.4rem;border-radius:8px;font:inherit;font-weight:700;cursor:pointer}button:disabled{opacity:.65}.trap{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
@@ -23,14 +24,37 @@ form{display:grid;gap:.6rem;max-width:640px}label{font-weight:700;margin-top:.7r
 const form=document.querySelector<HTMLFormElement>('#contact')!;
 const feedback=document.querySelector<HTMLElement>('#feedback')!;
 const send=document.querySelector<HTMLButtonElement>('#send')!;
+const botstatus=document.querySelector<HTMLElement>('#botstatus')!;
+async function proofOfWork() {
+ const response=await fetch('/api/contact?challenge=1',{cache:'no-store'});
+ if(!response.ok)throw new Error('challenge unavailable');
+ const c=await response.json();
+ if(c.algorithm!=='SHA-256'||!Number.isInteger(c.maxnumber)||c.maxnumber>100000)throw new Error('invalid challenge');
+ const encoder=new TextEncoder();
+ for(let n=0;n<c.maxnumber;n++){
+  const hash=await crypto.subtle.digest('SHA-256',encoder.encode(c.salt+String(n)));
+  const hex=Array.from(new Uint8Array(hash),b=>b.toString(16).padStart(2,'0')).join('');
+  if(hex===c.challenge){
+   const payload={algorithm:c.algorithm,challenge:c.challenge,salt:c.salt,signature:c.signature,number:n};
+   return btoa(JSON.stringify(payload));
+  }
+  if(n%250===0)await new Promise(resolve=>setTimeout(resolve,0));
+ }
+ throw new Error('challenge unsolved');
+}
 form.addEventListener('submit',async e=>{
  e.preventDefault();feedback.textContent='Sender …';send.disabled=true;
  try{
-  const response=await fetch('/api/contact',{method:'POST',body:new URLSearchParams(new FormData(form) as any),headers:{'Accept':'application/json','Content-Type':'application/x-www-form-urlencoded'},credentials:'same-origin'});
+  botstatus.textContent='Kontrollerer at innsendingen er ekte …';
+  const token=await proofOfWork();
+  const fields=new URLSearchParams(new FormData(form) as any);
+  fields.set('altcha',token);
+  botstatus.textContent='';
+  const response=await fetch('/api/contact',{method:'POST',body:fields,headers:{'Accept':'application/json','Content-Type':'application/x-www-form-urlencoded'},credentials:'same-origin'});
   if(!response.ok)throw new Error('Kunne ikke sende meldingen. Prøv igjen senere.');
   form.reset();feedback.textContent='Takk! Meldingen er sendt.';
  }catch{feedback.textContent='Meldingen ble ikke sendt. Prøv igjen senere.';}
- finally{send.disabled=false;}
+ finally{send.disabled=false;botstatus.textContent='';}
 });
 </script>
 </SiteLayout>
