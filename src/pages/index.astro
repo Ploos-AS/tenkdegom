@@ -3,7 +3,29 @@ import SiteLayout from '../layouts/SiteLayout.astro';
 import { articles } from '../data/articles';
 ---
 <SiteLayout title="Personvern angår oss alle" description="Gratis, forståelig og uavhengig folkeopplysning om digitalt personvern.">
-<section style="padding:3rem 0"><h1>Personvern angår oss alle.</h1><p class="lead">Hva deler du, hvem får tilgang – og hvilke valg har du? Vi gjør digitalt personvern forståelig, med gratis kunnskap og praktiske råd.</p><a class="button" href="/personvernsjekken/">Ta Personvernsjekken</a></section>
-<section aria-labelledby="utforsk"><h2 id="utforsk">Kom i gang</h2><div class="cards"><div class="card"><h2><a href="/laer/">Lær om personvern</a></h2><p>Praktiske artikler om kontoer, sporing og KI.</p></div><div class="card"><h2><a href="/personvernsjekken/">Personvernsjekken</a></h2><p>12 spørsmål. Ingen lagring av svar.</p></div><div class="card"><h2><a href="/om/">Om prosjektet</a></h2><p>Hvem står bak, og hvilke prinsipper følger vi?</p></div></div></section>
-<section><h2>Les først</h2><ul>{articles.slice(0,3).map(a=><li><a href={`/laer/${a.slug}/`}>{a.title}</a></li>)}</ul></section>
+  <section style="padding:3rem 0">
+    <h1>Personvern angår oss alle.</h1>
+    <p class="lead">Hva deler du, hvem får tilgang – og hvilke valg har du? Vi gjør digitalt personvern forståelig, med gratis kunnskap og praktiske råd.</p>
+    <a class="button" href="/personvernsjekken/">Ta Personvernsjekken</a>
+  </section>
+  <section aria-labelledby="utforsk">
+    <h2 id="utforsk">Kom i gang</h2>
+    <div class="cards">
+      <div class="card"><h2><a href="/laer/">Lær om personvern</a></h2><p>Praktiske artikler om kontoer, sporing og KI.</p></div>
+      <div class="card"><h2><a href="/personvernsjekken/">Personvernsjekken</a></h2><p>12 spørsmål. Ingen lagring av svar.</p></div>
+      <div class="card"><h2><a href="/om/">Om prosjektet</a></h2><p>Hvem står bak, og hvilke prinsipper følger vi?</p></div>
+    </div>
+  </section>
+  <section aria-labelledby="les-forst">
+    <h2 id="les-forst">Les først</h2>
+    <div class="featured-grid">
+      {articles.slice(0,3).map((a, i) => (
+        <a class="featured-card" href={`/laer/${a.slug}/`}>
+          <span class="eyebrow">Artikkel {i + 1}</span>
+          <h3>{a.title}</h3>
+          <p>{a.intro}</p>
+        </a>
+      ))}
+    </div>
+  </section>
 </SiteLayout>
