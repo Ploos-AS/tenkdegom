@@ -3,11 +3,35 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 import { articles } from '../../data/articles';
 export function getStaticPaths(){ return articles.map(article=>({params:{slug:article.slug},props:{article}})); }
 const { article } = Astro.props;
+const checklistGroups = [
+  { heading: 'Kontoer og enheter', start: 1, items: ['Oppdater mobil og PC.', 'Bruk unike, lange passord.', 'Slå på tofaktorautentisering.', 'Sjekk gjenopprettingsmetodene dine.'] },
+  { heading: 'Apper og deling', start: 5, items: ['Fjern unødvendige app-tillatelser.', 'Slett apper du ikke bruker.', 'Gå gjennom tilgangen til delte filer og mapper.'] },
+  { heading: 'Sporing og gode vaner', start: 8, items: ['Kontroller nettleserens sporingsbeskyttelse.', 'Vær forsiktig med uventede lenker.', 'Tenk deg om før du deler personopplysninger med KI-tjenester.'] }
+];
 ---
 <SiteLayout title={article.title} description={article.intro}>
 <article><p><a href="/laer/">← Alle artikler</a></p><h1>{article.title}</h1><p class="lead">{article.intro}</p>
 <p class="note">Publisert: <time datetime={article.publishedAt}>{new Intl.DateTimeFormat("nb-NO",{dateStyle:"long",timeZone:"UTC"}).format(new Date(`${article.publishedAt}T12:00:00Z`))}</time> · Sist oppdatert: <time datetime={article.updatedAt}>{new Intl.DateTimeFormat("nb-NO",{dateStyle:"long",timeZone:"UTC"}).format(new Date(`${article.updatedAt}T12:00:00Z`))}</time></p>
-{article.sections.map(([heading,body])=><section><h2>{heading}</h2><p>{body}</p></section>)}
+{article.slug === 'ti-enkle-personverngrep' ? (
+  <>
+    <p class="note">Kryss av etter hvert som du gjør tiltakene. Avkrysningene lagres ikke eller sendes til serveren, og nullstilles når siden lastes på nytt.</p>
+    {checklistGroups.map(group => (
+      <section><h2>{group.heading}</h2><ol start={group.start} class="checklist">
+        {group.items.map(item => <li><label><input type="checkbox" /><span>{item}</span></label></li>)}
+      </ol></section>
+    ))}
+    <section><h2>Velg to tiltak denne uken</h2><p>Begynn gjerne med tofaktorautentisering på e-posten og kontroll av appenes posisjonstilgang. Sett av ti minutter neste uke til flere tiltak.</p></section>
+  </>
+) : article.sections.map(([heading,body])=><section><h2>{heading}</h2><p>{body}</p></section>)}
 <h2>Les mer</h2><ul>{article.links.map(([label,url])=><li><a href={url}>{label}</a></li>)}</ul>
 <p class="note">Denne artikkelen gir generell veiledning. Kontroller aktuelle innstillinger og vilkår hos tjenesteleverandøren.</p>
-</article></SiteLayout>
+</article>
+<style>
+.checklist{padding-left:2rem}
+.checklist li{margin:.8rem 0}
+.checklist label{display:flex;gap:.8rem;align-items:flex-start;cursor:pointer}
+.checklist input{width:1.25rem;height:1.25rem;flex:0 0 auto;margin-top:.15rem;accent-color:#126047}
+.checklist input:focus-visible{outline:3px solid #a66500;outline-offset:3px}
+.checklist input:checked+span{text-decoration:line-through}
+</style>
+</SiteLayout>
