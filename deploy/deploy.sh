@@ -9,7 +9,7 @@ DEPLOY_PORT="${DEPLOY_PORT:-22}"
 [[ "${DEPLOY_PATH}" == /* && "${DEPLOY_PATH}" != "/" ]] || { echo "DEPLOY_PATH must be an absolute non-root path" >&2; exit 1; }
 [[ -f dist/index.html ]] || { echo "Build first: npm run build" >&2; exit 1; }
 release="$(date -u +%Y%m%dT%H%M%SZ)-${GITHUB_SHA:-manual}"
-release="${release:0:64}"
+release="${release:0:64}"\n[[ "$release" =~ ^[a-zA-Z0-9_-]+$ ]] || { echo "Invalid release identifier" >&2; exit 1; }\n[[ "$DEPLOY_PATH" =~ ^/[a-zA-Z0-9_./-]+$ ]] || { echo "Invalid DEPLOY_PATH" >&2; exit 1; }
 ssh -p "${DEPLOY_PORT}" -- "${DEPLOY_USER}@${DEPLOY_HOST}" "mkdir -p '${DEPLOY_PATH}/releases/${release}'"
 rsync -az --delete -e "ssh -p ${DEPLOY_PORT}" dist/ "${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/releases/${release}/"
 ssh -p "${DEPLOY_PORT}" -- "${DEPLOY_USER}@${DEPLOY_HOST}" "ln -sfn '${DEPLOY_PATH}/releases/${release}' '${DEPLOY_PATH}/current.new' && mv -Tf '${DEPLOY_PATH}/current.new' '${DEPLOY_PATH}/current'"
