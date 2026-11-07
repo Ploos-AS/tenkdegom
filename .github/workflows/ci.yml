@@ -43,6 +43,6 @@ jobs:
         run: npm run build
 
       - name: Verify build output
-        run: test -f dist/index.html
+        run: |\n          test -f dist/index.html\n          test -f dist/sitemap.xml\n          test -f dist/robots.txt\n          grep -q 'https://tenkdegom.no/laer/' dist/sitemap.xml\n          grep -q 'Sitemap: https://tenkdegom.no/sitemap.xml' dist/robots.txt
 
       # Deployment will be configured separately after selecting the VPS.
