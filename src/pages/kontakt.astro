@@ -6,11 +6,12 @@ import SiteLayout from '../layouts/SiteLayout.astro';
 <h1>Kontakt oss</h1>
 <p class="lead">Spørsmål om innholdet eller personvern? Send oss en melding. Henvendelsen går til Ploos AS.</p>
 <p>Vi bruker opplysningene du oppgir til å behandle og besvare henvendelsen. Ikke send passord, fødselsnummer eller andre sensitive opplysninger. Les <a href="/personvern/">personvernerklæringen</a>.</p>
-<form id="contact" action="/api/contact" method="post">
+<form id="contact" action="/api/contact" method="post" novalidate>
 <label for="name">Navn (valgfritt)</label><input id="name" name="name" autocomplete="name" maxlength="120" />
-<label for="email">E-postadresse <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" required />
-<label for="message">Melding <span aria-hidden="true">*</span></label><textarea id="message" name="message" rows="7" minlength="10" maxlength="5000" required></textarea>
+<label for="email">E-postadresse <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" required aria-describedby="email-error" /><span id="email-error" class="field-error" hidden></span>
+<label for="message">Melding <span aria-hidden="true">*</span></label><textarea id="message" name="message" rows="7" minlength="10" maxlength="5000" required aria-describedby="message-error"></textarea><span id="message-error" class="field-error" hidden></span>
 <div class="trap" aria-hidden="true"><label for="website">Nettside</label><input id="website" name="website" tabindex="-1" autocomplete="off" /></div>
+<p id="validation-summary" role="alert" tabindex="-1" hidden></p>
 <p id="botstatus" role="status" aria-live="polite">Botkontroll utføres når du sender.</p>
 <button type="submit" id="send">Send melding</button>
 <p id="feedback" role="status" aria-live="polite"></p>
@@ -18,13 +19,45 @@ import SiteLayout from '../layouts/SiteLayout.astro';
 <p class="note">Ingen tredjeparts-CAPTCHA eller analyseverktøy. Botkontrollen utføres lokalt i nettleseren og krever JavaScript.</p>
 </article>
 <style>
-form{display:grid;gap:.6rem;max-width:640px}label{font-weight:700;margin-top:.7rem}input,textarea{width:100%;padding:.8rem;border:1px solid #91a99b;border-radius:8px;font:inherit;background:#fff;color:#193b30}input:focus-visible,textarea:focus-visible{outline:3px solid #a66500;outline-offset:2px}button{justify-self:start;border:0;background:#126047;color:#fff;padding:.8rem 1.4rem;border-radius:8px;font:inherit;font-weight:700;cursor:pointer}button:disabled{opacity:.65}.trap{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+form{display:grid;gap:.6rem;max-width:640px}label{font-weight:700;margin-top:.7rem}input,textarea{width:100%;padding:.8rem;border:1px solid #91a99b;border-radius:8px;font:inherit;background:#fff;color:#193b30}input:focus-visible,textarea:focus-visible{outline:3px solid #a66500;outline-offset:2px}button{justify-self:start;border:0;background:#126047;color:#fff;padding:.8rem 1.4rem;border-radius:8px;font:inherit;font-weight:700;cursor:pointer}button:disabled{opacity:.65}.field-error,#validation-summary{color:#922121;font-weight:600}.field-error[hidden],#validation-summary[hidden]{display:none}input[aria-invalid="true"],textarea[aria-invalid="true"]{border:2px solid #922121}.trap{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
 </style>
 <script>
 const form=document.querySelector<HTMLFormElement>('#contact')!;
 const feedback=document.querySelector<HTMLElement>('#feedback')!;
 const send=document.querySelector<HTMLButtonElement>('#send')!;
 const botstatus=document.querySelector<HTMLElement>('#botstatus')!;
+const email=document.querySelector<HTMLInputElement>('#email')!;
+const message=document.querySelector<HTMLTextAreaElement>('#message')!;
+const validationSummary=document.querySelector<HTMLElement>('#validation-summary')!;
+function setFieldError(field: HTMLInputElement | HTMLTextAreaElement, errorId: string, error: string) {
+ const target=document.getElementById(errorId)!;
+ target.textContent=error;
+ target.hidden=!error;
+ if(error) field.setAttribute('aria-invalid','true');
+ else field.removeAttribute('aria-invalid');
+}
+function validateContact(): boolean {
+ const emailValue=email.value.trim();
+ const messageValue=message.value.trim();
+ let emailError='';
+ if(!emailValue) emailError='Oppgi e-postadressen din.';
+ else if(!email.validity.valid) emailError='Oppgi en gyldig e-postadresse.';
+ const messageError=!messageValue?'Skriv en melding.':messageValue.length<10?'Skriv en melding på minst 10 tegn.':'';
+ setFieldError(email,'email-error',emailError);
+ setFieldError(message,'message-error',messageError);
+ if(emailError || messageError){
+  validationSummary.textContent='Kontroller feltene som er markert nedenfor.';
+  validationSummary.hidden=false;
+  (emailError?email:message).focus();
+  return false;
+ }
+ validationSummary.textContent='';
+ validationSummary.hidden=true;
+ return true;
+}
+for(const field of [email,message]) field.addEventListener('input',()=>{
+ if(field.getAttribute('aria-invalid')==='true') validateContact();
+});
 async function proofOfWork() {
  const response=await fetch('/api/contact?challenge=1',{cache:'no-store'});
  if(!response.ok)throw new Error('challenge unavailable');
@@ -43,7 +76,9 @@ async function proofOfWork() {
  throw new Error('challenge unsolved');
 }
 form.addEventListener('submit',async e=>{
- e.preventDefault();feedback.textContent='Sender …';send.disabled=true;
+ e.preventDefault();
+ if(!validateContact()) return;
+ feedback.textContent='Sender …';send.disabled=true;
  try{
   botstatus.textContent='Kontrollerer at innsendingen er ekte …';
   const token=await proofOfWork();
