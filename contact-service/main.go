@@ -87,6 +87,20 @@ func limited(ip string) bool {
  attempts[ip]=append(attempts[ip],now)
  return false
 }
+// Periodically remove expired rate-limit entries even when no new requests arrive.
+func cleanupExpiredAttempts() {
+ ticker:=time.NewTicker(time.Minute)
+ defer ticker.Stop()
+ for now:=range ticker.C {
+  mu.Lock()
+  for ip,values:=range attempts {
+   recent:=values[:0]
+   for _,t:=range values {if now.Sub(t)<time.Minute{recent=append(recent,t)}}
+   if len(recent)==0{delete(attempts,ip)}else{attempts[ip]=recent}
+  }
+  mu.Unlock()
+ }
+}
 func clean(s string) string {return strings.TrimSpace(strings.ReplaceAll(strings.ReplaceAll(s,"\r"," "), "\n"," "))}
 func sendMail(host,user,password,to,name,reply,message string) error {
  addr:=net.JoinHostPort(host,"587")
@@ -119,6 +133,7 @@ func main(){
  if _,err:=rand.Read(challengeKey[:]);err!=nil{log.Fatal("cannot initialize challenge key")}
  if _,err:=mail.ParseAddress(user);err!=nil{log.Fatal("invalid SMTP_USER")}
  if _,err:=mail.ParseAddress(to);err!=nil{log.Fatal("invalid CONTACT_TO")}
+ go cleanupExpiredAttempts()
  mux:=http.NewServeMux()
  mux.HandleFunc("/api/contact",func(w http.ResponseWriter,r *http.Request){
   if r.Method=="GET"&&r.URL.Query().Get("challenge")=="1" {
