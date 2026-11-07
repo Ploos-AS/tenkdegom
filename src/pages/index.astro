@@ -1,0 +1,11 @@
+---
+const topics = [
+  { title: 'Lær om personvern', description: 'Forstå sporing, apper, KI og digitale rettigheter.', href: '/laer/' },
+  { title: 'Personvernsjekken', description: 'Få praktiske råd uten å opprette konto.', href: '/personvernsjekken/' },
+  { title: 'Om oss', description: 'Les om vårt formål, eierskap og redaksjonelle prinsipper.', href: '/om/' },
+];
+---
+<!doctype html>
+<html lang="nb"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="description" content="Tenk deg om er en norsk folkeopplysningsportal om digitalt personvern." /><title>Tenk deg om – Personvern angår oss alle</title><style>
+:root{font-family:system-ui,sans-serif;color:#17352d;background:#f7faf7}*{box-sizing:border-box}body{margin:0}header,main,footer{max-width:1050px;margin:auto;padding:1.5rem}header{display:flex;justify-content:space-between;align-items:center}a{color:#125f47}nav a{margin-left:1rem}h1{font-size:clamp(2.5rem,7vw,5rem);line-height:1.1}h2{font-size:1.4rem}.hero{padding:5rem 0 4rem;max-width:760px}.hero p{font-size:1.25rem;line-height:1.6}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}.card{background:white;border:1px solid #d8e5dd;border-radius:14px;padding:1.5rem}.card p{line-height:1.6}.button{display:inline-block;background:#155f49;color:white;padding:.9rem 1.2rem;border-radius:8px;text-decoration:none;font-weight:650}footer{margin-top:4rem;border-top:1px solid #d8e5dd;font-size:.9rem}
+</style></head><body><header><strong>Tenk deg om.</strong><nav aria-label="Hovedmeny"><a href="/laer/">Lær</a><a href="/personvernsjekken/">Personvernsjekken</a><a href="/om/">Om oss</a></nav></header><main><section class="hero"><h1>Personvern angår oss alle.</h1><p>Hva deler du, hvem får tilgang – og hvilke valg har du? Vi gjør digitalt personvern forståelig, med gratis kunnskap og praktiske råd.</p><a class="button" href="/personvernsjekken/">Ta personvernsjekken</a></section><section aria-labelledby="utforsk"><h2 id="utforsk">Utforsk</h2><div class="cards">{topics.map(topic => <article class="card"><h2><a href={topic.href}>{topic.title}</a></h2><p>{topic.description}</p></article>)}</div></section></main><footer>Utgitt av Ploos AS. Folkeopplysning først. Ingen sporingsbasert annonsering.</footer></body></html>
