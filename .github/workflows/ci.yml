@@ -36,6 +36,9 @@ jobs:
       - name: Type and Astro checks
         run: npm run check
 
+      - name: Run content and privacy regression tests
+        run: node --test tests/*.test.mjs
+
       - name: Build static site
         run: npm run build
 
