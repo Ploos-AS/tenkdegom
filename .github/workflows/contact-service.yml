@@ -1,0 +1,48 @@
+name: Build contact service
+
+on:
+  pull_request:
+    paths:
+      - 'contact-service/**'
+      - '.github/workflows/contact-service.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: contact-service/go.mod
+          cache-dependency-path: contact-service/go.mod
+      - name: Test and vet
+        working-directory: contact-service
+        run: |
+          go test ./...
+          go vet ./...
+      - name: Build Linux amd64
+        working-directory: contact-service
+        env:
+          CGO_ENABLED: '0'
+          GOOS: linux
+          GOARCH: amd64
+        run: go build -trimpath -ldflags="-s -w" -o tenkdegom-contact .
+      - name: Verify binary
+        run: |
+          file contact-service/tenkdegom-contact
+          test -s contact-service/tenkdegom-contact
+          sha256sum contact-service/tenkdegom-contact > contact-service/tenkdegom-contact.sha256
+      - name: Upload binary artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: tenkdegom-contact-linux-amd64
+          path: |
+            contact-service/tenkdegom-contact
+            contact-service/tenkdegom-contact.sha256
+          retention-days: 7
+          if-no-files-found: error
