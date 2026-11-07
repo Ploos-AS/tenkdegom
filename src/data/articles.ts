@@ -71,22 +71,13 @@ export const articles = [
     "title": "Slik beskytter du kontoene dine",
     "intro": "Gode passord og ekstra innloggingsbeskyttelse er blant de viktigste grepene du kan ta.",
     "sections": [
-      [
-        "Unike passord",
-        "Bruk forskjellige, lange passord til hver tjeneste. En passordbehandler gjør det mulig uten å måtte huske alt selv."
-      ],
-      [
-        "Tofaktorautentisering",
-        "Aktiver ekstra innloggingsbeskyttelse på e-post, bankrelaterte tjenester og andre viktige kontoer. Sikkerhetsnøkler eller autentiseringsapper er gode alternativer der de støttes."
-      ],
-      [
-        "Gjenoppretting",
-        "Sjekk at gjenopprettingsmetodene er oppdaterte. Oppbevar reservekoder sikkert, og vær skeptisk til meldinger som presser deg til å logge inn via en lenke."
-      ],
-      [
-        "Sjekk om e-postadressen er ekstra godt beskyttet",
-        "E-postkontoen er ofte nøkkelen til å tilbakestille andre passord. Prioriter derfor et unikt passord, tofaktorautentisering og oppdaterte gjenopprettingsmetoder her først."
-      ]
+      ["Begynn med e-postkontoen", "E-postkontoen brukes ofte til å tilbakestille passord til andre tjenester. Logg inn direkte hos e-postleverandøren, åpne sikkerhetsinnstillingene og kontroller passord, tofaktorautentisering og gjenopprettingsadresse eller -telefon. Se også etter ukjente enheter eller aktive økter."],
+      ["Lag unike passord", "Bruk et langt, unikt passord for hver konto. Ikke gjenbruk e-postpassordet andre steder. En passordbehandler kan generere og lagre passord, slik at du bare trenger å huske et sterkt hovedpassord. Ikke del hovedpassordet med andre."],
+      ["Velg en passordbehandler", "Se etter tydelig informasjon om kryptering, sikkerhetsoppdateringer, mulighet for eksport og gjenoppretting, støtte for enhetene dine og en forståelig prismodell. Undersøk hva som skjer hvis du mister hovedpassordet eller mister tilgang til kontoen. Ingen enkelt løsning passer alle."],
+      ["Slå på ekstra innloggingsbeskyttelse", "Finn «Sikkerhet», «Innlogging» eller «Tofaktorautentisering» i kontoinnstillingene. Velg passnøkkel eller fysisk sikkerhetsnøkkel der det støttes, eller en autentiseringsapp. SMS kan være bedre enn bare passord, men er vanligvis mindre motstandsdyktig mot enkelte angrep. Kontroller at du har en sikker reservevei inn."],
+      ["Ta vare på reservekoder", "Mange tjenester tilbyr engangskoder for gjenoppretting når du aktiverer tofaktorautentisering. Lagre dem på et sikkert sted som ikke er avhengig av den samme telefonen du bruker til innlogging. Test at du vet hvordan kontoen kan gjenopprettes, uten å logge deg ut av alle enheter."],
+      ["Gå gjennom aktive innlogginger", "Åpne kontoens sikkerhetsside og se etter «Enheter», «Økter» eller «Hvor du er logget inn». Logg ut ukjente enheter, bytt passord ved mistanke om misbruk, og undersøk om gjenopprettingsopplysningene er endret."],
+      ["Tre tiltak på ti minutter", "1. Aktiver ekstra innloggingsbeskyttelse på e-posten. 2. Bytt ett gjenbrukt passord til et unikt passord. 3. Kontroller at du har en trygg gjenopprettingsmetode. Begynn med de viktigste kontoene og fortsett senere."]
     ],
     "links": [
       [
