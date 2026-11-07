@@ -1,6 +1,8 @@
 export const articles = [
   {
     "slug": "hva-vet-google-og-meta",
+    "publishedAt": "2026-11-07",
+    "updatedAt": "2026-11-07",
     "title": "Hva vet Google og Meta om deg?",
     "intro": "Store plattformer kan få innsikt i hva vi søker etter, ser på og samhandler med. Her er hvordan du får bedre oversikt.",
     "sections": [
@@ -34,6 +36,8 @@ export const articles = [
   },
   {
     "slug": "ikke-noe-a-skjule",
+    "publishedAt": "2026-11-07",
+    "updatedAt": "2026-11-07",
     "title": "Hvorfor personvern betyr noe – selv om du ikke har noe å skjule",
     "intro": "Personvern handler om kontroll over egne opplysninger, ikke om å holde hemmeligheter.",
     "sections": [
@@ -63,6 +67,8 @@ export const articles = [
   },
   {
     "slug": "beskytt-kontoene-dine",
+    "publishedAt": "2026-11-07",
+    "updatedAt": "2026-11-07",
     "title": "Slik beskytter du kontoene dine",
     "intro": "Gode passord og ekstra innloggingsbeskyttelse er blant de viktigste grepene du kan ta.",
     "sections": [
@@ -92,6 +98,8 @@ export const articles = [
   },
   {
     "slug": "ki-og-personopplysninger",
+    "publishedAt": "2026-11-07",
+    "updatedAt": "2026-11-07",
     "title": "Hva deler du egentlig med KI-tjenester?",
     "intro": "En KI-samtale kan føles privat, men opplysningene behandles etter tjenestens egne vilkår.",
     "sections": [
@@ -121,6 +129,8 @@ export const articles = [
   },
   {
     "slug": "ti-enkle-personverngrep",
+    "publishedAt": "2026-11-07",
+    "updatedAt": "2026-11-07",
     "title": "Ti enkle grep for bedre digitalt personvern",
     "intro": "Du trenger ikke gjøre alt på én dag. Begynn med ett eller to tiltak.",
     "sections": [
