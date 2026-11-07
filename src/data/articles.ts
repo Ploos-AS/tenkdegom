@@ -6,24 +6,6 @@ export const articles = [
     "title": "Hva vet Google og Meta om deg?",
     "intro": "Se hvilke opplysninger Google og Meta har knyttet til kontoene dine, last ned en kopi og velg hva du vil beholde.",
     "sections": [
-      [
-        "Hva samles inn?",
-        "Avhengig av hvilke tjenester du bruker og innstillingene dine, kan opplysninger om aktivitet, enheter, omtrentlig posisjon og interesser knyttes til kontoen din. Det betyr ikke at alle data samles inn om alle."
-      ],
-      [
-        "Hva brukes opplysningene til?",
-        "Opplysninger kan brukes til personalisering, sikkerhet, analyse og annonsering. Detaljene varierer mellom tjenester og kontoinnstillinger."
-      ],
-      [
-        "Hva kan du gjøre?",
-        "Gå gjennom aktivitets- og annonseinnstillingene, slett historikk du ikke vil beholde, og vurder hvilke tillatelser appene faktisk trenger. Bruk personverninnstillinger jevnlig, ikke bare ved opprettelse av konto."
-      ],
-      [
-        "Sjekk opplysningene du faktisk har delt",
-        "Åpne kontoens personvern- og aktivitetsoversikt. Se spesielt etter søke- og seerhistorikk, annonsepreferanser, enhetstilganger og tilkoblede apper. Noter hvilke valg som er slått på, og endre bare det du forstår konsekvensene av."
-      ]
-    ],
-    "sections": [
       ["Start med å se, ikke slette", "Logg inn på din egen konto, helst ved å skrive inn adressen selv. Se gjennom opplysningene før du endrer innstillinger. Noen valg kan påvirke funksjoner som historikk, anbefalinger og gjenoppretting."],
       ["Google: Se aktiviteten din", "Åpne Google Min aktivitet (myactivity.google.com). Her kan du gjennomgå aktivitet som er lagret på kontoen, avhengig av hvilke innstillinger og tjenester du bruker. Bruk filtrene for å undersøke aktivitet fra ulike tjenester. Under Google-kontoen → Data og personvern kan du gjennomgå historikkinnstillinger og automatisk sletting. Menynavn kan endres."],
       ["Google: Last ned opplysningene", "Gå til Google Takeout (takeout.google.com). Velg hvilke Google-tjenester du ønsker data fra, og opprett en eksport. En eksport er en kopi, ikke en sletting. Oppbevar filene sikkert, siden de kan inneholde personopplysninger."],
