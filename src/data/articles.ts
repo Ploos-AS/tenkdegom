@@ -15,6 +15,10 @@ export const articles = [
       [
         "Hva kan du gjøre?",
         "Gå gjennom aktivitets- og annonseinnstillingene, slett historikk du ikke vil beholde, og vurder hvilke tillatelser appene faktisk trenger. Bruk personverninnstillinger jevnlig, ikke bare ved opprettelse av konto."
+      ],
+      [
+        "Sjekk opplysningene du faktisk har delt",
+        "Åpne kontoens personvern- og aktivitetsoversikt. Se spesielt etter søke- og seerhistorikk, annonsepreferanser, enhetstilganger og tilkoblede apper. Noter hvilke valg som er slått på, og endre bare det du forstår konsekvensene av."
       ]
     ],
     "links": [
@@ -44,6 +48,10 @@ export const articles = [
       [
         "Tre små grep",
         "Del mindre når du kan, gjennomgå app-tillatelser og still spørsmål ved hvorfor en tjeneste ber om opplysninger. Du trenger ikke være ekspert for å ta gode valg."
+      ],
+      [
+        "Et konkret eksempel",
+        "En treningsapp kan trenge posisjon under en løpetur, men ikke nødvendigvis hele døgnet. Ved å velge «bare mens appen brukes» kan du redusere innsamlingen uten å slutte å bruke appen."
       ]
     ],
     "links": [
@@ -69,6 +77,10 @@ export const articles = [
       [
         "Gjenoppretting",
         "Sjekk at gjenopprettingsmetodene er oppdaterte. Oppbevar reservekoder sikkert, og vær skeptisk til meldinger som presser deg til å logge inn via en lenke."
+      ],
+      [
+        "Sjekk om e-postadressen er ekstra godt beskyttet",
+        "E-postkontoen er ofte nøkkelen til å tilbakestille andre passord. Prioriter derfor et unikt passord, tofaktorautentisering og oppdaterte gjenopprettingsmetoder her først."
       ]
     ],
     "links": [
@@ -94,6 +106,10 @@ export const articles = [
       [
         "Bruk eksempler i stedet",
         "Bytt ut navn, adresser og andre identifiserende detaljer med oppdiktede eksempler når du ber om hjelp. Husk også at KI-svar kan være feil."
+      ],
+      [
+        "Et trygt eksempel på KI-bruk",
+        "I stedet for å lime inn en ekte kundehenvendelse med navn og telefonnummer, kan du skrive en anonymisert versjon med oppdiktede detaljer. Kontroller at kombinasjonen av opplysninger heller ikke identifiserer personen."
       ]
     ],
     "links": [
@@ -119,6 +135,10 @@ export const articles = [
       [
         "Sporing og gode vaner",
         "8. Se over nettleserens sporingsbeskyttelse. 9. Vær forsiktig med uventede lenker. 10. Tenk deg om før du deler personopplysninger med KI-tjenester."
+      ],
+      [
+        "Velg to tiltak denne uken",
+        "Start med å aktivere tofaktorautentisering på e-posten og gjennomgå appenes posisjonstilgang. Sett av ti minutter neste uke til de øvrige tiltakene. Små, gjennomførte endringer er bedre enn en lang liste som blir liggende."
       ]
     ],
     "links": [
