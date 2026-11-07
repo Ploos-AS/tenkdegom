@@ -1,0 +1,2 @@
+# tenkdegom
+Tenk deg om
