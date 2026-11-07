@@ -40,22 +40,13 @@ export const articles = [
     "title": "Hvorfor personvern betyr noe – selv om du ikke har noe å skjule",
     "intro": "Personvern handler om kontroll over egne opplysninger, ikke om å holde hemmeligheter.",
     "sections": [
-      [
-        "Hverdagslige opplysninger kan si mye",
-        "Enkelte datapunkter virker harmløse hver for seg. Samlet kan de avsløre vaner, relasjoner, interesser og sårbare situasjoner."
-      ],
-      [
-        "Valgfrihet og trygghet",
-        "Du bør kunne lese, kommunisere og søke informasjon uten unødvendig kartlegging. Personvern reduserer også risikoen hvis data kommer på avveie."
-      ],
-      [
-        "Tre små grep",
-        "Del mindre når du kan, gjennomgå app-tillatelser og still spørsmål ved hvorfor en tjeneste ber om opplysninger. Du trenger ikke være ekspert for å ta gode valg."
-      ],
-      [
-        "Et konkret eksempel",
-        "En treningsapp kan trenge posisjon under en løpetur, men ikke nødvendigvis hele døgnet. Ved å velge «bare mens appen brukes» kan du redusere innsamlingen uten å slutte å bruke appen."
-      ]
+      ["Personvern handler om valgfrihet", "Du trenger ikke ha gjort noe galt for å ønske privatliv. Personvern betyr at du skal kunne forstå og påvirke hvordan opplysninger om deg samles inn, brukes og deles. Det gjelder også helt vanlige aktiviteter som søk, meldinger og handleturer."],
+      ["Små opplysninger kan gi et stort bilde", "Én posisjonsregistrering eller ett søk sier ofte lite. Over tid kan mange slike opplysninger gi indikasjoner på hvor du bor, når du er hjemme, hvem du møter og hva du interesserer deg for. Slike slutninger kan være feil, men likevel påvirke hvordan du blir kategorisert."],
+      ["Eksempel: En treningsapp", "En treningsapp kan trenge posisjon mens du løper, men ikke nødvendigvis resten av døgnet. Se under telefonens Innstillinger → Apper → Tillatelser eller Personvern → Posisjon. Velg «Bare mens appen brukes» der det passer. Menynavn varierer mellom Android og iPhone."],
+      ["Eksempel: Delte bilder", "Et bilde kan røpe mer enn motivet: personer i bakgrunnen, stedsinformasjon eller detaljer om hjemmet. Før du publiserer, sjekk hvem som kan se bildet, og om det inneholder noe andre ikke ønsker delt. Noen tjenester fjerner posisjonsdata ved opplasting, andre kan beholde eller bruke informasjonen."],
+      ["Eksempel: Personlige annonser", "Når du får annonser som virker skreddersydd, kan det skyldes aktivitet, interesser, kontoinnstillinger eller andre signaler. Det betyr ikke nødvendigvis at noen har lyttet til samtalene dine. Undersøk annonsepreferansene i tjenesten og velg bort personalisering der du ønsker det."],
+      ["Tre grep du kan ta nå", "1. Kontroller posisjonstilgangen til én app. 2. Se hvem som kan se de siste innleggene eller bildene dine. 3. Åpne personverninnstillingene i en tjeneste du bruker mye, og se hvilke opplysninger du kan administrere. Begynn med ett valg du forstår."],
+      ["Du trenger ikke slutte å bruke digitale tjenester", "Målet er ikke å skape frykt eller kreve at alle velger det samme. Målet er å gjøre informerte valg. Små endringer i tillatelser, deling og historikk kan gi bedre kontroll uten at du må slutte å bruke tjenestene du har nytte av."]
     ],
     "links": [
       [
