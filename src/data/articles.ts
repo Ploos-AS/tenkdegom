@@ -4,29 +4,28 @@ export const articles = [
     "publishedAt": "2026-11-07",
     "updatedAt": "2026-11-07",
     "title": "Hva vet Google og Meta om deg?",
-    "intro": "Store plattformer kan få innsikt i hva vi søker etter, ser på og samhandler med. Her er hvordan du får bedre oversikt.",
+    "intro": "Se hvilke opplysninger Google og Meta har knyttet til kontoene dine, last ned en kopi og velg hva du vil beholde.",
     "sections": [
-      [
-        "Hva samles inn?",
-        "Avhengig av hvilke tjenester du bruker og innstillingene dine, kan opplysninger om aktivitet, enheter, omtrentlig posisjon og interesser knyttes til kontoen din. Det betyr ikke at alle data samles inn om alle."
-      ],
-      [
-        "Hva brukes opplysningene til?",
-        "Opplysninger kan brukes til personalisering, sikkerhet, analyse og annonsering. Detaljene varierer mellom tjenester og kontoinnstillinger."
-      ],
-      [
-        "Hva kan du gjøre?",
-        "Gå gjennom aktivitets- og annonseinnstillingene, slett historikk du ikke vil beholde, og vurder hvilke tillatelser appene faktisk trenger. Bruk personverninnstillinger jevnlig, ikke bare ved opprettelse av konto."
-      ],
-      [
-        "Sjekk opplysningene du faktisk har delt",
-        "Åpne kontoens personvern- og aktivitetsoversikt. Se spesielt etter søke- og seerhistorikk, annonsepreferanser, enhetstilganger og tilkoblede apper. Noter hvilke valg som er slått på, og endre bare det du forstår konsekvensene av."
-      ]
+      ["Start med å se, ikke slette", "Logg inn på din egen konto, helst ved å skrive inn adressen selv. Se gjennom opplysningene før du endrer innstillinger. Noen valg kan påvirke funksjoner som historikk, anbefalinger og gjenoppretting."],
+      ["Google: Se aktiviteten din", "Åpne Google Min aktivitet (myactivity.google.com). Her kan du gjennomgå aktivitet som er lagret på kontoen, avhengig av hvilke innstillinger og tjenester du bruker. Bruk filtrene for å undersøke aktivitet fra ulike tjenester. Under Google-kontoen → Data og personvern kan du gjennomgå historikkinnstillinger og automatisk sletting. Menynavn kan endres."],
+      ["Google: Last ned opplysningene", "Gå til Google Takeout (takeout.google.com). Velg hvilke Google-tjenester du ønsker data fra, og opprett en eksport. En eksport er en kopi, ikke en sletting. Oppbevar filene sikkert, siden de kan inneholde personopplysninger."],
+      ["Meta: Finn informasjonen din", "Åpne Kontosenter fra innstillingene i Facebook eller Instagram. Se etter «Din informasjon og dine tillatelser» og valget for å laste ned informasjonen din. Du kan velge konto, datatyper og tidsrom. Meta endrer av og til navn og plassering på menyene; bruk personvernsenteret hvis du ikke finner valgene."],
+      ["Meta: Kontroller annonser og aktivitet", "I Kontosenter kan du se etter annonsepreferanser og aktivitetsinformasjon. Gå gjennom tilkoblede kontoer, hvilke interesser som brukes til annonser, og tilgjengelige valg for aktivitet utenfor Metas tjenester. Hvilke innstillinger du ser, kan variere."],
+      ["Tre tiltak du kan gjøre nå", "1. Se gjennom nylig lagret aktivitet hos Google. 2. Finn nedlastingsvalget i Metas Kontosenter. 3. Kontroller én innstilling for historikk eller annonsering, og noter hva du endret. Husk at en nedlastet kopi ikke nødvendigvis omfatter all behandling eller alle opplysninger."],
+      ["Hva samles inn – og hvorfor?", "Avhengig av tjenestene og innstillingene kan kontoene inneholde aktivitet, enhetsopplysninger, interesser og omtrentlig posisjon. Opplysninger kan brukes til sikkerhet, personalisering, analyse og annonsering. Ikke alle typer data samles inn om alle; undersøk din egen konto for å se hva som er tilgjengelig."]
     ],
     "links": [
       [
         "Google – personvernkontroll",
         "https://myaccount.google.com/privacycheckup"
+      ],
+      [
+        "Google – Min aktivitet",
+        "https://myactivity.google.com/"
+      ],
+      [
+        "Google – Takeout",
+        "https://takeout.google.com/"
       ],
       [
         "Meta – personvernsenter",
