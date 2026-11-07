@@ -1,0 +1,36 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+---
+<SiteLayout title="Kontakt oss" description="Send en henvendelse til Tenk deg om uten å publisere e-postadressen din.">
+<article>
+<h1>Kontakt oss</h1>
+<p class="lead">Spørsmål om innholdet eller personvern? Send oss en melding. Henvendelsen går til Ploos AS.</p>
+<p>Vi bruker opplysningene du oppgir til å behandle og besvare henvendelsen. Ikke send passord, fødselsnummer eller andre sensitive opplysninger. Les <a href="/personvern/">personvernerklæringen</a>.</p>
+<form id="contact" action="/api/contact" method="post">
+<label for="name">Navn (valgfritt)</label><input id="name" name="name" autocomplete="name" maxlength="120" />
+<label for="email">E-postadresse <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" required />
+<label for="message">Melding <span aria-hidden="true">*</span></label><textarea id="message" name="message" rows="7" minlength="10" maxlength="5000" required></textarea>
+<div class="trap" aria-hidden="true"><label for="website">Nettside</label><input id="website" name="website" tabindex="-1" autocomplete="off" /></div>
+<button type="submit" id="send">Send melding</button>
+<p id="feedback" role="status" aria-live="polite"></p>
+</form>
+<p class="note">Ingen tredjeparts-CAPTCHA eller analyseverktøy. Innsending krever JavaScript; skjemaet fungerer også med vanlig POST, men gir da et enkelt serversvar.</p>
+</article>
+<style>
+form{display:grid;gap:.6rem;max-width:640px}label{font-weight:700;margin-top:.7rem}input,textarea{width:100%;padding:.8rem;border:1px solid #91a99b;border-radius:8px;font:inherit;background:#fff;color:#193b30}input:focus-visible,textarea:focus-visible{outline:3px solid #a66500;outline-offset:2px}button{justify-self:start;border:0;background:#126047;color:#fff;padding:.8rem 1.4rem;border-radius:8px;font:inherit;font-weight:700;cursor:pointer}button:disabled{opacity:.65}.trap{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+</style>
+<script>
+const form=document.querySelector<HTMLFormElement>('#contact')!;
+const feedback=document.querySelector<HTMLElement>('#feedback')!;
+const send=document.querySelector<HTMLButtonElement>('#send')!;
+form.addEventListener('submit',async e=>{
+ e.preventDefault();feedback.textContent='Sender …';send.disabled=true;
+ try{
+  const response=await fetch('/api/contact',{method:'POST',body:new URLSearchParams(new FormData(form) as any),headers:{'Accept':'application/json','Content-Type':'application/x-www-form-urlencoded'},credentials:'same-origin'});
+  if(!response.ok)throw new Error('Kunne ikke sende meldingen. Prøv igjen senere.');
+  form.reset();feedback.textContent='Takk! Meldingen er sendt.';
+ }catch{feedback.textContent='Meldingen ble ikke sendt. Prøv igjen senere.';}
+ finally{send.disabled=false;}
+});
+</script>
+</SiteLayout>
