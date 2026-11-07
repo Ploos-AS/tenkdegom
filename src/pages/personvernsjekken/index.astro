@@ -1,19 +1,11 @@
 ---
+import SiteLayout from '../../layouts/SiteLayout.astro';
 import { questions } from '../../data/privacy-questions';
 ---
-<!doctype html>
-<html lang="nb">
-<head>
-<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="Gratis personvernsjekk. Svarene forblir i nettleseren din." />
-<title>Personvernsjekken – Tenk deg om</title>
+<SiteLayout title="Personvernsjekken" description="12 spørsmål og praktiske personvernråd. Ingen lagring eller innsending av svar.">
 <style>
-:root{font-family:system-ui,sans-serif;color:#173c30;background:#f7faf7}*{box-sizing:border-box}body{margin:0}header,main,footer{max-width:840px;margin:auto;padding:1.3rem}h1{font-size:clamp(2rem,6vw,3rem)}p,li{line-height:1.6}fieldset{background:white;border:1px solid #cbdcd1;border-radius:12px;margin:1rem 0;padding:1.1rem}legend{font-weight:700;padding:.3rem}label{display:inline-flex;align-items:center;gap:.4rem;margin:.4rem 1rem .4rem 0;cursor:pointer}input{accent-color:#176249}button{border:0;border-radius:8px;padding:.8rem 1.1rem;background:#176249;color:white;font:inherit;cursor:pointer;margin:.4rem .5rem .4rem 0}button.secondary{background:#dcebe2;color:#173c30}a{color:#176249}.notice{padding:1rem;background:#e7f2ea;border-left:4px solid #176249}.error{color:#9c2424;font-weight:700}#results{margin-top:2rem}button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid #b26b0b;outline-offset:3px}@media print{header,footer,form,.actions{display:none!important}body{background:white}}
+p,li{line-height:1.6}fieldset{background:white;border:1px solid #cbdcd1;border-radius:12px;margin:1rem 0;padding:1.1rem}legend{font-weight:700;padding:.3rem}label{display:inline-flex;align-items:center;gap:.4rem;margin:.4rem 1rem .4rem 0;cursor:pointer}input{accent-color:#176249}button{border:0;border-radius:8px;padding:.8rem 1.1rem;background:#176249;color:white;font:inherit;cursor:pointer;margin:.4rem .5rem .4rem 0}button.secondary{background:#dcebe2;color:#173c30}.notice{padding:1rem;background:#e7f2ea;border-left:4px solid #176249}.error{color:#9c2424;font-weight:700}#results{margin-top:2rem}@media print{header,footer,form,.actions{display:none!important}body{background:white}}
 </style>
-</head>
-<body>
-<header><a href="/">← Tenk deg om</a></header>
-<main>
 <h1>Personvernsjekken</h1>
 <p>12 spørsmål om e-post, nettleser, passord, apper, skylagring og KI. Få en praktisk handlingsplan.</p>
 <p class="notice"><strong>Personvern:</strong> Svarene behandles bare i nettleseren din. De sendes ikke til serveren og lagres ikke. PDF/utskrift håndteres av nettleseren.</p>
@@ -29,8 +21,6 @@ import { questions } from '../../data/privacy-questions';
 <div class="actions"><button type="button" id="print">Skriv ut / lagre som PDF</button><button type="button" id="again" class="secondary">Endre svar</button></div>
 <p>Dette er en veiledende egenvurdering, ikke en sikkerhetsrevisjon.</p>
 </section>
-</main>
-<footer>Utgitt av Ploos AS · <a href="/om/">Om prosjektet</a></footer>
 <script>
 import { questions } from '../../data/privacy-questions';
 const form=document.querySelector<HTMLFormElement>('#check')!;
@@ -63,4 +53,4 @@ form.addEventListener('reset',()=>{results.hidden=true;validation.hidden=true;ad
 document.querySelector<HTMLButtonElement>('#print')!.addEventListener('click',()=>window.print());
 document.querySelector<HTMLButtonElement>('#again')!.addEventListener('click',()=>{form.querySelector<HTMLInputElement>('input')?.focus();window.scrollTo({top:0,behavior:'smooth'});});
 </script>
-</body></html>
+</SiteLayout>
