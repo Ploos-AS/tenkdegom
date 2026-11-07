@@ -10,6 +10,7 @@ import (
  "net/http"
  "net/mail"
  "net/smtp"
+ "net/textproto"
  "os"
  "strings"
  "sync"
@@ -50,6 +51,13 @@ func sendMail(host,user,password,to,name,reply,message string) error {
  if err=writer.Close();err!=nil{return err}
  return client.Quit()
 }
+func smtpFailureDetail(err error) string {
+ var smtpErr *textproto.Error
+ if errors.As(err,&smtpErr) {
+  return fmt.Sprintf("SMTP response code %d",smtpErr.Code)
+ }
+ return fmt.Sprintf("error type %T",err)
+}
 func main(){
  host:=env("SMTP_HOST");user:=env("SMTP_USER");password:=env("SMTP_TOKEN");to:=env("CONTACT_TO")
  if _,err:=mail.ParseAddress(user);err!=nil{log.Fatal("invalid SMTP_USER")}
@@ -68,7 +76,7 @@ func main(){
   if len(name)>120||len(reply)>254||len(message)<10||len(message)>5000||strings.ContainsAny(reply,"\r\n") {http.Error(w,"Invalid fields",400);return}
   parsed,err:=mail.ParseAddress(reply);if err!=nil||parsed.Address!=reply{http.Error(w,"Invalid email",400);return}
   if limited(){http.Error(w,"Too many requests",429);return}
-  if err:=sendMail(host,user,password,to,name,reply,message);err!=nil{log.Printf("SMTP delivery failed: %T",err);http.Error(w,"Delivery failed",502);return}
+  if err:=sendMail(host,user,password,to,name,reply,message);err!=nil{log.Printf("SMTP delivery failed: %s",smtpFailureDetail(err));http.Error(w,"Delivery failed",502);return}
   w.Header().Set("Content-Type","application/json; charset=utf-8");fmt.Fprintln(w,`{"ok":true}`)
  })
  server:=&http.Server{Addr:"127.0.0.1:8787",Handler:mux,ReadHeaderTimeout:5*time.Second,ReadTimeout:15*time.Second,WriteTimeout:35*time.Second,IdleTimeout:30*time.Second}
