@@ -40,6 +40,7 @@ jobs:
           test -f dist/sitemap.xml
           test -f dist/robots.txt
           grep -q 'https://tenkdegom.no/laer/' dist/sitemap.xml
+          grep -q 'https://tenkdegom.no/kontakt/' dist/sitemap.xml
           grep -q 'Sitemap: https://tenkdegom.no/sitemap.xml' dist/robots.txt
       - name: Configure verified SSH access
         env:
