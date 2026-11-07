@@ -1,0 +1,24 @@
+[Unit]
+Description=Tenk deg om contact form
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=tenkdegom-contact
+Group=tenkdegom-contact
+EnvironmentFile=/etc/tenkdegom/contact.env
+ExecStart=/usr/local/bin/tenkdegom-contact
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+CapabilityBoundingSet=
+LockPersonality=true
+MemoryDenyWriteExecute=true
+
+[Install]
+WantedBy=multi-user.target
