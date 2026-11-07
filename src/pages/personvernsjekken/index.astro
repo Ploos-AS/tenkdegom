@@ -33,7 +33,7 @@ form.addEventListener('submit',event=>{
  event.preventDefault();
  const answers=questions.map((_,i)=>form.querySelector<HTMLInputElement>('input[name="q'+i+'"]:checked')?.value);
  const missing=answers.findIndex(value=>!value);
- if(missing!==-1){validation.hidden=false;validation.textContent='Svar på alle spørsmål før du fortsetter.';form.querySelector<HTMLInputElement>('input[name="q'+missing+'"]')?.focus();results.hidden=true;return;}
+ if(missing!==-1){validation.hidden=false;validation.textContent='Du mangler svar på spørsmål '+(missing+1)+' av '+questions.length+'.';form.querySelector<HTMLInputElement>('input[name="q'+missing+'"]')?.focus();results.hidden=true;return;}
  validation.hidden=true;
  const count=answers.filter(a=>a==='yes').length;
  summary.textContent='Du svarte ja på '+count+' av '+questions.length+' spørsmål. Rådene er sortert etter svarene dine.';
@@ -49,7 +49,7 @@ form.addEventListener('submit',event=>{
  allgood.hidden=advice.childElementCount!==0;
  results.hidden=false;results.focus();
 });
-form.addEventListener('reset',()=>{results.hidden=true;validation.hidden=true;advice.replaceChildren();});
+form.addEventListener('reset',()=>{results.hidden=true;validation.hidden=true;validation.textContent='';summary.textContent='';allgood.hidden=true;advice.replaceChildren();});
 document.querySelector<HTMLButtonElement>('#print')!.addEventListener('click',()=>window.print());
 document.querySelector<HTMLButtonElement>('#again')!.addEventListener('click',()=>{form.querySelector<HTMLInputElement>('input')?.focus();window.scrollTo({top:0,behavior:'smooth'});});
 </script>
