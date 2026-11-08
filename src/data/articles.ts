@@ -1,5 +1,60 @@
 export const articles = [
   {
+    "slug": "trenger-du-egentlig-vpn",
+    "publishedAt": "2026-11-08",
+    "updatedAt": "2026-11-08",
+    "title": "Trenger du egentlig VPN?",
+    "intro": "VPN kan skjule IP-adressen din og skjerme trafikk fra nettverket du bruker. Men det gjør deg ikke anonym – og er ikke nødvendig for alle.",
+    "sections": [
+      [
+        "Hva gjør en VPN?",
+        "VPN betyr virtuelt privat nettverk. En VPN-app oppretter normalt en kryptert forbindelse mellom enheten din og VPN-leverandørens server. Nettsteder ser vanligvis VPN-serverens IP-adresse i stedet for din egen. Den som driver Wi-Fi-nettet eller internettforbindelsen din, ser at du kobler til en VPN, men får mindre innsyn i hvilke tjenester du bruker. Nøyaktig beskyttelse avhenger av oppsettet, og enkelte apper eller forbindelser kan være unntatt."
+      ],
+      [
+        "Men er ikke nettet allerede kryptert?",
+        "Jo, mye av nettet bruker HTTPS. Det beskytter innholdet i forbindelsen mellom nettleseren og nettstedet, også uten VPN. Nettleverandøren kan likevel ofte se metadata, som IP-adresser og noen ganger domenenavn. VPN kan skjerme deler av denne informasjonen fra det lokale nettverket og nettleverandøren, men flytter samtidig tillit til VPN-leverandøren."
+      ],
+      [
+        "VPN gjør deg ikke anonym",
+        "Hvis du logger inn på Google, Facebook eller en nettbutikk, vet tjenesten fortsatt hvilken konto du bruker. Informasjonskapsler, nettleserfingeravtrykk og posisjonstillatelser kan også bidra til sporing. En VPN stopper ikke automatisk svindel, phishing, skadevare eller deling av personopplysninger du selv oppgir."
+      ],
+      [
+        "Når kan VPN være nyttig?",
+        "En VPN kan være nyttig når du bruker et nettverk du ikke stoler på, ønsker å skjule din vanlige IP-adresse for nettsteder, eller vil redusere innsynet nettleverandøren har i trafikkens destinasjoner. Den kan også brukes for sikker tilgang til arbeidsplassens interne systemer, men dette er en annen bruk enn en kommersiell personvern-VPN. På et vanlig nett med HTTPS og oppdaterte enheter er VPN ikke et absolutt krav for å være trygg."
+      ],
+      [
+        "Hvem stoler du på?",
+        "Uten VPN må du i noen grad stole på internettleverandøren og nettverket du bruker. Med VPN må du i stedet stole på VPN-leverandøren, som kan ha teknisk mulighet til å observere deler av trafikkens metadata. Les personvernerklæringen, undersøk hvilke logger som lagres, hvem som eier tjenesten, og om påstander om sikkerhet er dokumentert gjennom uavhengige revisjoner. En «ingen logger»-påstand alene er ikke en garanti."
+      ],
+      [
+        "Gratis eller betalt?",
+        "Gratis VPN er ikke automatisk dårlig, og betalt VPN er ikke automatisk bra. Undersøk hvordan tjenesten finansieres, om den viser annonser, hvilke data den samler inn, og om den har begrensninger på hastighet eller datamengde. Unngå ukjente VPN-apper som ber om unødvendige tillatelser eller lover full anonymitet."
+      ],
+      [
+        "Fem spørsmål før du velger",
+        "1. Hva vil jeg beskytte meg mot? 2. Trenger jeg å skjule IP-adressen eller trafikkens destinasjoner? 3. Hvem driver VPN-tjenesten, og hvilke logger lagres? 4. Fungerer den på enhetene mine, og dekker den hele enheten eller bare nettleseren? 5. Kan jeg oppnå målet enklere med HTTPS, oppdateringer, sporingsbeskyttelse og gode kontoinnstillinger?"
+      ],
+      [
+        "Vårt råd",
+        "Begynn med gode passord, tofaktorautentisering, oppdatert programvare og nettleserens sporingsbeskyttelse. Vurder VPN som et tillegg når du har et konkret behov. Vi anbefaler ingen bestemt VPN-leverandør i denne artikkelen."
+      ]
+    ],
+    "links": [
+      [
+        "EFF – Choosing the VPN That's Right for You",
+        "https://ssd.eff.org/module/vpn.html"
+      ],
+      [
+        "Mozilla – What is a VPN?",
+        "https://www.mozilla.org/en-US/products/vpn/resource-center/what-is-a-vpn/"
+      ],
+      [
+        "Les også: Ti enkle grep for bedre digitalt personvern",
+        "/laer/ti-enkle-personverngrep/"
+      ]
+    ]
+  },
+  {
     "slug": "hva-vet-google-og-meta",
     "publishedAt": "2026-11-07",
     "updatedAt": "2026-11-07",
