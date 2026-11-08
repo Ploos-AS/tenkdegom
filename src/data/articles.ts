@@ -1,5 +1,80 @@
 export const articles = [
   {
+    "slug": "alternativer-til-google-drive-og-onedrive",
+    "publishedAt": "2026-11-08",
+    "updatedAt": "2026-11-08",
+    "title": "Alternativer til Google Drive og OneDrive – hvem har tilgang til filene dine?",
+    "intro": "Proton Drive, Infomaniak kDrive og Nextcloud gir ulike muligheter for lagring og deling. Forstå forskjellen på kryptering, samarbeid og egen kontroll.",
+    "sections": [
+      [
+        "Hva bør du se etter i en skytjeneste?",
+        "Skylagring gjør det enkelt å få tilgang til dokumenter, bilder og andre filer fra flere enheter. Men tjenestene er forskjellige. Før du velger, spør hva leverandøren teknisk kan lese, hvor filene lagres, hvem du kan dele med, hvordan du får eksportert data, og hva som skjer hvis kontoen blir stengt. En tjeneste kan være god til samarbeid uten å tilby samme krypteringsmodell som en tjeneste laget for maksimal konfidensialitet."
+      ],
+      [
+        "Tre typer beskyttelse – ikke bland dem sammen",
+        "HTTPS eller TLS beskytter filer mens de overføres. Kryptering ved lagring beskytter data på lagringsmediet, men leverandøren eller serveren kan fortsatt ha tilgang til dekrypteringsnøklene. Ende-til-ende-kryptering betyr at filene krypteres på enheten din før opplasting, slik at tjenesteleverandøren normalt ikke kan lese innholdet. Ingen av disse løsningene hindrer at noen med tilgang til din ulåste enhet eller konto kan se filene."
+      ],
+      [
+        "Proton Drive: Personvern først",
+        "Proton Drive krypterer filinnhold, filnavn og mappenavn på enheten før opplasting. Proton opplyser at de ikke kan dekryptere innholdet. Noen metadata, som visse tidsstempler, rettigheter og informasjon som trengs for drift, er ikke skjult på samme måte. Du kan dele filer og mapper, blant annet via lenker, og bruke dokumentverktøy. Vurder Proton Drive når konfidensialitet er et hovedkrav, men test om synkronisering, deling og samarbeid fungerer slik du trenger."
+      ],
+      [
+        "Infomaniak kDrive: Samarbeid og lagring i Sveits",
+        "Infomaniak kDrive tilbyr synkronisering, deling, dokumentredigering og samarbeid. Infomaniak opplyser at data lagres i Sveits og beskyttes under overføring og ved lagring. kDrive har ikke ende-til-ende-kryptering som standard, så dette må ikke forveksles med Protons modell. kDrive kan være et godt alternativ for familier og arbeidsgrupper som prioriterer felles dokumenter og enkel administrasjon. Vurder tilgangsstyring, kontotyper og eksportmuligheter før du flytter alle filene dine."
+      ],
+      [
+        "Nextcloud: Du velger hvem som drifter",
+        "Nextcloud er åpen programvare for filer, synkronisering og samarbeid. Du kan drifte den selv eller kjøpe en driftet løsning. Det gir fleksibilitet, men også ansvar: oppdateringer, tilgangskontroll, sikkerhetskopier og overvåking må ivaretas av noen. Nextcloud kan bruke serverbasert kryptering, men dette skjuler ikke nødvendigvis filene for serveradministratoren. Ende-til-ende-kryptering finnes som en egen løsning med særskilte begrensninger. Ikke anta at selvhosting automatisk er tryggere enn en profesjonelt driftet tjeneste."
+      ],
+      [
+        "Lagring i Europa er ikke det samme som ende-til-ende-kryptering",
+        "At en tjeneste lagrer data i Sveits eller et EU/EØS-land, kan ha betydning for jurisdiksjon og behandling av personopplysninger. Men geografisk plassering sier ikke i seg selv om leverandøren kan lese filene. Se på både teknisk kryptering, avtaleforhold, sikkerhetsrutiner og hvem som administrerer nøklene. En norsk eller europeisk server er ikke automatisk en garanti for privatliv."
+      ],
+      [
+        "Del filer med omtanke",
+        "Bruk deling med navngitte personer når det er mulig. Hvis du oppretter en lenke, kontroller om alle med lenken kan åpne filen. Se etter passord, utløpsdato og rettigheter for visning eller redigering. Gå jevnlig gjennom delte mapper og trekk tilbake tilganger som ikke lenger trengs. Husk at en mottaker som har lastet ned en kopi, kan beholde den selv om du senere fjerner delingslenken."
+      ],
+      [
+        "Synkronisering er ikke sikkerhetskopi",
+        "Når en fil slettes eller overskrives på én enhet, kan endringen synkroniseres til de andre. Papirkurv og versjonshistorikk kan hjelpe, men har begrensninger. Ha minst én separat sikkerhetskopi som ikke bare er en synkronisert mappe, og test at du kan gjenopprette viktige filer. Hvis du selv drifter Nextcloud, må du også sikre databasen, konfigurasjonen og eventuelle krypteringsnøkler."
+      ],
+      [
+        "Slik prøver du et alternativ uten risiko",
+        "1. Opprett en konto eller testinstallasjon. 2. Aktiver tofaktorautentisering der det er tilgjengelig. 3. Last opp noen ufarlige testfiler og prøv synkronisering på dine enheter. 4. Test deling, rettigheter og gjenoppretting av en slettet fil. 5. Finn ut hvordan du eksporterer alt igjen. Flytt først viktige dokumenter når du vet at løsningen fungerer og har en separat sikkerhetskopi."
+      ],
+      [
+        "Åpenhet om prosjektet",
+        "Tenk deg om utgis av Ploos AS, som deltar i Protons partnerprogram og arbeider med egne teknologitjenester. Denne artikkelen inneholder ingen affiliate-lenker. Vi beskriver både fordeler og begrensninger og anbefaler ikke én leverandør for alle. Kontroller alltid oppdatert dokumentasjon og vilkår før du velger."
+      ]
+    ],
+    "links": [
+      [
+        "Proton Drive – kryptering og sikkerhet",
+        "https://proton.me/drive/security"
+      ],
+      [
+        "Proton Drive – brukerstøtte",
+        "https://proton.me/support/drive"
+      ],
+      [
+        "Infomaniak – sikkerhet i kDrive",
+        "https://www.infomaniak.com/en/support/faq/2462/understanding-kdrive-data-security"
+      ],
+      [
+        "Infomaniak – kom i gang med kDrive",
+        "https://www.infomaniak.com/en/support/faq/2366/getting-started-guide-kdrive"
+      ],
+      [
+        "Nextcloud – serverkryptering og ende-til-ende-kryptering",
+        "https://docs.nextcloud.com/server/stable/admin_manual/configuration_files/encryption_configuration.html"
+      ],
+      [
+        "Les også: Alternativer til Gmail og Outlook",
+        "/laer/alternativer-til-gmail-og-outlook/"
+      ]
+    ]
+  },
+  {
     "slug": "alternativer-til-gmail-og-outlook",
     "publishedAt": "2026-11-08",
     "updatedAt": "2026-11-08",
