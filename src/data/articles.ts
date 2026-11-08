@@ -1,5 +1,76 @@
 export const articles = [
   {
+    "slug": "alternativer-til-gmail-og-outlook",
+    "publishedAt": "2026-11-08",
+    "updatedAt": "2026-11-08",
+    "title": "Alternativer til Gmail og Outlook – Proton, Tuta og Infomaniak",
+    "intro": "Vil du ha mer kontroll over e-posten din? Her er tre alternativer, hva de beskytter, og hvilke kompromisser du bør kjenne til.",
+    "sections": [
+      [
+        "Du trenger ikke bytte alt på én gang",
+        "Gmail og Outlook fungerer godt for mange, men du kan ønske en annen leverandør av hensyn til personvern, kontroll over data eller uavhengighet fra store plattformer. En ny e-posttjeneste gir ikke automatisk full anonymitet eller sikker kommunikasjon med alle. Begynn med å vurdere hva som er viktigst for deg: kryptering, enkel bruk, samarbeid, pris eller støtte for eksisterende e-postprogrammer."
+      ],
+      [
+        "Tre begreper du bør kjenne",
+        "Transportkryptering (TLS) beskytter normalt meldingen mellom e-postservere under overføring, men er ikke det samme som ende-til-ende-kryptering. Ende-til-ende-kryptering betyr at innholdet beskyttes slik at bare avsender og tiltenkt mottaker kan lese det, når løsningen brukes riktig. Kryptering av lagrede meldinger kan beskytte innholdet hos leverandøren uten at hele meldingsveien er ende-til-ende-kryptert. Spør alltid hva som krypteres, når og for hvem."
+      ],
+      [
+        "Proton Mail: Kryptert e-post og flere personverntjenester",
+        "Proton tilbyr e-post sammen med blant annet kalender, skylagring og passordbehandling. Meldinger mellom Proton-brukere er automatisk ende-til-ende-kryptert. Vanlig e-post til andre leverandører er ikke automatisk ende-til-ende-kryptert, men du kan bruke passordbeskyttede meldinger. Proton støtter OpenPGP. På datamaskin kan betalte brukere benytte Proton Mail Bridge for e-postprogrammer som Thunderbird; dette er ikke vanlig direkte IMAP-tilgang på mobil. Vurder Proton hvis du ønsker kryptert e-post som del av et større økosystem."
+      ],
+      [
+        "Tuta: Sterkt fokus på kryptering",
+        "Tuta tilbyr e-post, kalender og kontakter med omfattende kryptering. Meldinger mellom Tuta-brukere er automatisk ende-til-ende-kryptert; kryptert kommunikasjon med eksterne mottakere kan skje med et avtalt passord. Tuta beskytter også emnefelt i sin egen krypterte løsning, men avsender- og mottakeradresser er fortsatt nødvendige metadata. Tuta bruker egne apper og nettleser, ikke vanlig IMAP i tredjeparts e-postprogrammer. Vurder Tuta hvis kryptering veier tyngre enn integrasjon med tradisjonelle e-postklienter."
+      ],
+      [
+        "Infomaniak Mail og kSuite: E-post og samarbeid",
+        "Infomaniak tilbyr e-post og en bredere samarbeidspakke med blant annet kalender, skylagring og dokumentverktøy. Dette kan passe familier, organisasjoner og små virksomheter som ønsker flere tjenester samlet. Infomaniak har også en funksjon for å sende krypterte meldinger fra egne e-postapper; til eksterne mottakere kan det kreves passord. Denne funksjonen må ikke forveksles med at all vanlig e-post automatisk er ende-til-ende-kryptert. Undersøk hva som gjelder for meldingene dine, e-postprogrammet du bruker, og den valgte kontotypen."
+      ],
+      [
+        "Hva skjer når du skriver til noen hos en annen leverandør?",
+        "En melding fra en kryptert e-posttjeneste til en vanlig Gmail- eller Outlook-adresse blir ikke nødvendigvis ende-til-ende-kryptert. Vanligvis brukes TLS mellom servere der det støttes, og mottakerens leverandør kan ha tilgang til meldingsinnholdet. Proton, Tuta og Infomaniak har ulike måter å sende særskilt beskyttede meldinger på. Mottakeren kan måtte åpne en lenke og oppgi passord. Del aldri et slikt passord i den samme ubeskyttede meldingen."
+      ],
+      [
+        "Hvilken tjeneste passer best?",
+        "Velg Proton hvis du prioriterer kryptert e-post og ønsker flere personverntjenester i samme økosystem. Undersøk Tuta hvis kryptering av e-post, emnefelt, kalender og kontakter er viktigst, og du kan bruke deres egne apper. Undersøk Infomaniak hvis du særlig ønsker en samlet e-post- og kontorpakke med samarbeidsfunksjoner. Ingen av dem er automatisk best for alle. Sjekk gjeldende priser, lagringsgrenser, tilgjengelighet, gjenoppretting og muligheten til å eksportere data før du bestemmer deg."
+      ],
+      [
+        "Slik bytter du uten å miste viktig e-post",
+        "1. Opprett den nye kontoen og aktiver tofaktorautentisering. 2. Test sending, mottak og gjenoppretting. 3. Undersøk import av gamle meldinger og kontakter; støtten varierer. 4. Oppdater e-postadressen hos bank, offentlige tjenester og andre viktige kontoer. 5. Behold den gamle adressen en overgangsperiode og kontroller at ingen viktige meldinger blir borte. Et eget domenenavn kan gjøre fremtidige leverandørbytter enklere, men krever mer administrasjon."
+      ],
+      [
+        "Åpenhet om prosjektet",
+        "Tenk deg om utgis av Ploos AS, som også deltar i Protons partnerprogram. Denne artikkelen bruker vanlige lenker uten sporingsparametere eller affiliate-henvisninger. Omtalen er ment som generell veiledning, ikke en rangering eller kjøpsanbefaling. Tjenestene endres over tid; kontroller oppdatert dokumentasjon hos leverandørene."
+      ]
+    ],
+    "links": [
+      [
+        "Proton – slik krypteres e-post",
+        "https://proton.me/support/proton-mail-encryption-explained"
+      ],
+      [
+        "Proton – støtte for e-postprogrammer via Bridge",
+        "https://proton.me/support/imap-smtp-and-pop3-setup"
+      ],
+      [
+        "Tuta – kryptering",
+        "https://tuta.com/encryption"
+      ],
+      [
+        "Tuta – spørsmål og svar om sikkerhet",
+        "https://tuta.com/support/security"
+      ],
+      [
+        "Infomaniak – kryptert e-postsending",
+        "https://www.infomaniak.com/en/support/faq/1582/secure-an-email-sending-with-an-encryption-key"
+      ],
+      [
+        "Infomaniak – e-post og samarbeid",
+        "https://www.infomaniak.com/en/ksuite/service-mail/ecosystem"
+      ]
+    ]
+  },
+  {
     "slug": "trenger-du-egentlig-vpn",
     "publishedAt": "2026-11-08",
     "updatedAt": "2026-11-08",
