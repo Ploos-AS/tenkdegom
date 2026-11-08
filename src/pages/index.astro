@@ -1,6 +1,14 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
 import { articles } from '../data/articles';
+
+const fixedSlugs = ['ti-enkle-personverngrep', 'ikke-noe-a-skjule'];
+const fixedArticles = fixedSlugs.map(slug => articles.find(article => article.slug === slug));
+if (fixedArticles.some(article => !article)) throw new Error('A featured article is missing');
+const newestArticle = [...articles]
+  .filter(article => !fixedSlugs.includes(article.slug))
+  .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))[0];
+const featuredArticles = [...fixedArticles, newestArticle].filter(article => article !== undefined);
 ---
 <SiteLayout title="Personvern angår oss alle" description="Gratis, forståelig og uavhengig folkeopplysning om digitalt personvern.">
   <section style="padding:3rem 0">
@@ -19,9 +27,9 @@ import { articles } from '../data/articles';
   <section aria-labelledby="les-forst">
     <h2 id="les-forst">Les først</h2>
     <div class="featured-grid">
-      {articles.slice(0,3).map((a, i) => (
+      {featuredArticles.map((a, i) => (
         <a class="featured-card" href={`/laer/${a.slug}/`}>
-          <span class="eyebrow">Artikkel {i + 1}</span>
+          <span class="eyebrow">{i === 2 ? "Sist publisert" : "Les først"}</span>
           <h3>{a.title}</h3>
           <p>{a.intro}</p>
         </a>
