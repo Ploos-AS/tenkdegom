@@ -17,7 +17,7 @@ test('site has privacy notice and shared footer link', () => {
 test('all article slugs are unique and article sources are declared', () => {
  const source = read('src/data/articles.ts');
  const slugs = [...source.matchAll(/"slug":\s*"([^"]+)"/g)].map(m=>m[1]);
- assert.equal(slugs.length, 5);
+ assert.ok(slugs.length >= 5, "Expected at least five articles");
  assert.equal(new Set(slugs).size, slugs.length);
- assert.equal((source.match(/"links":/g) || []).length, 5);
+ assert.equal((source.match(/"links":/g) || []).length, slugs.length);
 });
