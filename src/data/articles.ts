@@ -1,5 +1,84 @@
 export const articles = [
   {
+    "slug": "hvilken-nettleser-beskytter-personvernet",
+    "publishedAt": "2026-11-08",
+    "updatedAt": "2026-11-08",
+    "title": "Hvilken nettleser beskytter personvernet ditt best?",
+    "intro": "Firefox, Brave, Tor Browser, Chrome og Edge beskytter deg på ulike måter. Her er forskjellene – og hvorfor inkognitomodus ikke gjør deg anonym.",
+    "sections": [
+      [
+        "Hva betyr personvern i nettleseren?",
+        "Nettleseren er inngangen til store deler av ditt digitale liv. Nettsteder kan forsøke å følge deg ved hjelp av informasjonskapsler, sporingsskript og tekniske kjennetegn ved enheten din. En god nettleser kan redusere slik sporing, men kan ikke hindre at et nettsted kjenner deg igjen når du logger inn eller selv oppgir personopplysninger."
+      ],
+      [
+        "Firefox: Kontroll og beskyttelse mot sporing",
+        "Firefox har utvidet sporingsbeskyttelse og Total Cookie Protection, som isolerer informasjonskapsler mellom nettsteder. Standardinnstillingene gir allerede nyttig beskyttelse. Strengere innstillinger kan blokkere mer, men kan også føre til at enkelte nettsteder ikke fungerer som forventet. Firefox er et alternativ for deg som ønsker en selvstendig nettlesermotor og mulighet til å justere personverninnstillingene."
+      ],
+      [
+        "Brave: Mye beskyttelse fra første stund",
+        "Brave blokkerer mange annonser, sporingsskript og tredjeparts informasjonskapsler gjennom funksjonen Shields. Nettleseren forsøker også å gjøre fingeravtrykksporing vanskeligere. Brave bygger på Chromium, så nettsidekompatibiliteten er ofte god. Ekstra funksjoner som belønninger og kryptolommebok er ikke nødvendige for å bruke nettleseren; vurder selv hvilke du vil ha aktivert."
+      ],
+      [
+        "Tor Browser: Når anonymitet er særlig viktig",
+        "Tor Browser sender nettlesertrafikken gjennom Tor-nettverket for å skjule den vanlige IP-adressen din for nettstedene du besøker. Den er også utviklet for å redusere fingeravtrykksporing. Tor kan være tregere, og enkelte tjenester blokkerer Tor-trafikk eller krever ekstra kontroller. Tor Browser garanterer ikke anonymitet: Logger du inn på en personlig konto eller oppgir navnet ditt, kan nettstedet fortsatt vite hvem du er. Ikke installer tilfeldige tillegg som kan svekke beskyttelsen."
+      ],
+      [
+        "Chrome: Praktisk, men sjekk datainnstillingene",
+        "Google Chrome er mye brukt og har sikkerhetsfunksjoner som beskytter mot skadelige nettsteder. Men Chrome blokkerer ikke alle tredjeparts informasjonskapsler som standard. Gå gjennom innstillingene for informasjonskapsler, synkronisering, søkemotor og hvilke data du deler med Google. Sikkerhet mot skadevare og beskyttelse mot kommersiell sporing er ikke det samme."
+      ],
+      [
+        "Edge: Sporingsbeskyttelse med flere nivåer",
+        "Microsoft Edge tilbyr sporingsbeskyttelse på nivåene Grunnleggende, Balansert og Streng. Balansert er standard og forsøker å kombinere beskyttelse med at nettsteder fungerer normalt. Streng kan stoppe mer sporing, men kan også skape problemer med innlogging eller innhold. Se også over synkronisering og andre valgfrie Microsoft-tjenester."
+      ],
+      [
+        "Hva er informasjonskapsler og fingeravtrykk?",
+        "Informasjonskapsler kan være nyttige: De holder deg innlogget og husker innstillinger. Tredjeparts informasjonskapsler kan derimot brukes til å følge deg på tvers av nettsteder. Fingeravtrykksporing forsøker å kjenne igjen nettleseren ved å kombinere opplysninger om blant annet skjerm, skrifttyper og grafikk. Å slette informasjonskapsler fjerner ikke nødvendigvis et slikt fingeravtrykk."
+      ],
+      [
+        "Inkognitomodus gjør deg ikke anonym",
+        "Privat nettlesing eller inkognitomodus gjør først og fremst at nettleseren ikke beholder vanlig historikk og enkelte lokale data etter økten. Nettsteder, arbeidsgiverens nettverk eller internettleverandøren kan fortsatt observere deler av aktiviteten, avhengig av forbindelsen. Modusen skjuler heller ikke IP-adressen din. Den er nyttig på en delt datamaskin, men er ingen anonymitetstjeneste."
+      ],
+      [
+        "Hvilken bør du velge?",
+        "For vanlig surfing med god sporingsbeskyttelse er Firefox og Brave naturlige alternativer å prøve. Tor Browser passer når behovet for anonymitet er større og du kan leve med noen praktiske begrensninger. Chrome og Edge kan fortsatt brukes sikrere ved å gjennomgå innstillingene, men har andre standardvalg og tettere tilknytning til sine respektive økosystemer. Ingen nettleser er best for alle, og resultatet avhenger også av hvordan du bruker den."
+      ],
+      [
+        "Fem enkle grep du kan ta i dag",
+        "1. Oppdater nettleseren automatisk. 2. Kontroller sporingsbeskyttelsen og innstillingene for tredjeparts informasjonskapsler. 3. Se over hvilke nettsteder som har tilgang til kamera, mikrofon og posisjon. 4. Fjern tillegg du ikke bruker, og installer bare tillegg du stoler på. 5. Bruk unike passord og tofaktorautentisering på viktige kontoer. Personvern og kontosikkerhet utfyller hverandre."
+      ],
+      [
+        "Åpenhet om prosjektet",
+        "Tenk deg om utgis av Ploos AS. Denne artikkelen er generell, leverandørnøytral informasjon og inneholder ingen affiliate-lenker. Nettlesere oppdateres ofte, så sjekk leverandørenes dokumentasjon for gjeldende funksjoner og innstillinger."
+      ]
+    ],
+    "links": [
+      [
+        "Mozilla – utvidet sporingsbeskyttelse i Firefox",
+        "https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop"
+      ],
+      [
+        "Brave – slik fungerer Shields",
+        "https://support.brave.app/hc/en-us/articles/360022806212-How-do-I-use-Shields-while-browsing"
+      ],
+      [
+        "Tor Project – trygg bruk av Tor Browser",
+        "https://support.torproject.org/tor-browser/security/using-tb-safely/"
+      ],
+      [
+        "Microsoft – sporingsbeskyttelse i Edge",
+        "https://support.microsoft.com/en-us/edge/learn-about-tracking-prevention-in-microsoft-edge"
+      ],
+      [
+        "MDN – tredjeparts informasjonskapsler",
+        "https://developer.mozilla.org/en-US/docs/Web/Privacy/Guides/Third-party_cookies"
+      ],
+      [
+        "Les også: Trenger du egentlig VPN?",
+        "/laer/trenger-du-egentlig-vpn/"
+      ]
+    ]
+  },
+  {
     "slug": "alternativer-til-google-drive-og-onedrive",
     "publishedAt": "2026-11-08",
     "updatedAt": "2026-11-08",
