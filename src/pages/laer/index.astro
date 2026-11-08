@@ -1,5 +1,32 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import { articles } from '../../data/articles';
+
+const alternativeSlugs = new Set([
+  'hvilken-nettleser-beskytter-personvernet',
+  'alternativer-til-google-drive-og-onedrive',
+  'alternativer-til-gmail-og-outlook',
+  'trenger-du-egentlig-vpn',
+]);
+const alternatives = articles.filter(article => alternativeSlugs.has(article.slug));
+const fundamentals = articles.filter(article => !alternativeSlugs.has(article.slug));
 ---
-<SiteLayout title="Lær om personvern" description="Les gratis guider om digitalt personvern, VPN, kontosikkerhet, sporing og KI – med praktiske råd du kan bruke med én gang."><h1>Lær om personvern</h1><p class="lead">Korte, praktiske introduksjoner. Vi oppdaterer innholdet etter hvert som tjenester og råd endrer seg.</p><div class="cards">{articles.map(a=><article class="card"><h2><a href={`/laer/${a.slug}/`}>{a.title}</a></h2><p>{a.intro}</p></article>)}</div></SiteLayout>
+<SiteLayout title="Lær om personvern" description="Les gratis guider om digitalt personvern, personvernvennlige alternativer, kontosikkerhet, sporing og KI – med praktiske råd du kan bruke med én gang.">
+  <h1>Lær om personvern</h1>
+  <p class="lead">Korte, praktiske introduksjoner. Vi oppdaterer innholdet etter hvert som tjenester og råd endrer seg.</p>
+  <nav aria-label="Temaer på denne siden">
+    <a href="#personvernvennlige-alternativer">Personvernvennlige alternativer</a>
+    <span aria-hidden="true"> · </span>
+    <a href="#personvern-i-hverdagen">Personvern i hverdagen</a>
+  </nav>
+  <section aria-labelledby="personvernvennlige-alternativer">
+    <h2 id="personvernvennlige-alternativer">Personvernvennlige alternativer</h2>
+    <p>Utforsk nettlesere, e-post, skylagring og VPN – med fordeler, begrensninger og praktiske råd.</p>
+    <div class="cards">{alternatives.map(a => <article class="card"><h3><a href={`/laer/${a.slug}/`}>{a.title}</a></h3><p>{a.intro}</p></article>)}</div>
+  </section>
+  <section aria-labelledby="personvern-i-hverdagen">
+    <h2 id="personvern-i-hverdagen">Personvern i hverdagen</h2>
+    <p>Forstå sporing, sikre kontoene dine og ta bedre valg om hva du deler på nettet.</p>
+    <div class="cards">{fundamentals.map(a => <article class="card"><h3><a href={`/laer/${a.slug}/`}>{a.title}</a></h3><p>{a.intro}</p></article>)}</div>
+  </section>
+</SiteLayout>
