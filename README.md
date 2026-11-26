@@ -6,58 +6,53 @@
 
 ## Formål
 
-Vi vil gjøre digitalt personvern forståelig, relevant og praktisk for alle – uavhengig av alder og teknisk bakgrunn. Grunnleggende kunnskap og verktøy skal være gratis.
+Digitalt personvern skal være forståelig, relevant og praktisk for alle, uavhengig av alder og teknisk bakgrunn. Grunnleggende kunnskap og verktøy skal være gratis.
 
-## Redaksjonelle prinsipper
+## Status – 26. november 2026
 
-- **Folkeopplysning først:** Saklige, forståelige og handlingsrettede råd.
-- **Uavhengighet:** Ingen leverandør kan kjøpe seg til en bedre vurdering.
-- **Åpenhet:** Vi opplyser om eierskap, finansiering og kommersielle forbindelser.
-- **Personvern i praksis:** Dataminimering, ingen unødvendige brukerkontoer og ingen tredjepartssporing.
-- **Tydelig reklame:** Eventuelle affiliate-lenker skal merkes tydelig.
+- Norsk forside, læringsportal med 19 artikler, kildelenker og relaterte artikler.
+- Personvernsjekken: 12 spørsmål, lokal behandling av svar, handlingsplan og utskrift/PDF via nettleseren.
+- Ressursside, kontaktskjema, personvernerklæring og redaksjonelle prinsipper.
+- Sitemap, robots.txt, canonical, Open Graph og strukturerte artikkeldata.
+- Grunnleggende tilgjengelighetstiltak; full WCAG 2.2 AA-revisjon gjenstår.
+- CI med Astro-kontroll, regresjonstester og statisk bygg; egen produksjonsworkflow.
+- Manuell ekstern lenkekontroll.
 
-Mulige inntektskilder er frivillige bidrag, affiliate-lenker, digitale kompendier og relevante kurs. Inntekter skal støtte driften uten å styre redaksjonelle vurderinger.
+Status beskriver implementasjon i repositoriet, ikke en uavhengig revisjon eller bekreftelse på at alle produksjonstjenester fungerer.
 
-## Første versjon
+## Redaksjon og finansiering
 
-Prosjektet er under utvikling. Første leveranse omfatter:
+Se [EDITORIAL.md](EDITORIAL.md) for arbeidsrutiner og [Om oss](https://tenkdegom.no/om/) for offentlige prinsipper. Ingen leverandør kan kjøpe en positiv vurdering. Relevante kommersielle forbindelser skal opplyses, og reklame skal merkes. Frivillige bidrag, digitale publikasjoner, kurs og tydelig merkede affiliate-lenker er mulige inntektskilder.
 
-- Norsk forside og informasjon om prosjektet
-- Fem kvalitetssikrede artikler (planlagt)
-- Gratis personvernsjekk med svar behandlet lokalt i nettleseren (planlagt)
-- Redaksjonelle prinsipper og åpen finansieringsinformasjon
+## Teknologi og drift
 
-**Merk:** Personvernsjekken er foreløpig en plassholderside, ikke et fungerende verktøy.
-
-## Teknologi
-
-- [Astro](https://astro.build/) og TypeScript
-- Statiske sider som utgangspunkt
-- Ingen database eller brukerkontoer i første versjon
-- Mulig Go-backend senere ved behov
-- Planlagt drift på europeisk VPS med Caddy og HTTPS
+Astro og TypeScript med statisk frontend. Personvernsjekken behandler svar lokalt; kontaktskjemaet er et separat serveravhengig endepunkt (/api/contact). Ingen tredjepartssporing i nettstedets kildekode. Produksjonsworkflow bygger og tester før publisering via SSH med verifisert vertsnøkkel. Caddy og HTTPS inngår i driftsoppsettet.
 
 ## Lokal utvikling
 
-Krever Node.js og npm.
+Bruk Node.js 22 (som i CI) og npm.
 
 ```bash
 npm install
 npm run dev
 ```
 
-Bygg produksjonsfiler:
+Kontroller før PR:
 
 ```bash
+npm run check
+node --test tests/*.test.mjs
 npm run build
 ```
 
-Bygget er ikke verifisert i CI ennå.
+Manuell kildekontroll:
 
-## Veikart
+```bash
+npm run check:links
+```
 
-Se [ROADMAP.md](ROADMAP.md) for milepæler og videre utvikling.
+Undersøk DEAD og REVIEW manuelt. Ekstern lenkekontroll er ikke en obligatorisk CI-port og bekrefter ikke at kilden støtter en påstand. Lokal frontend alene gir ikke et fungerende kontaktendepunkt.
 
-## Eier
+## Videre arbeid
 
-**Ploos AS** – redaksjonelt ansvar og utgiver av Tenk deg om.
+Se [ROADMAP.md](ROADMAP.md). Oppdater redaksjonelle data og anbefalingskart sammen ved nye artikler. Ikke legg hemmeligheter eller personopplysninger i repositoriet.
