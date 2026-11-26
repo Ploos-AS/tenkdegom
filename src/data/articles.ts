@@ -1,5 +1,96 @@
 export const articles = [
   {
+    "slug": "bedre-personvern-pa-mobiltelefonen",
+    "publishedAt": "2026-11-26",
+    "updatedAt": "2026-11-26",
+    "title": "Bedre personvern på mobiltelefonen",
+    "intro": "Du trenger ikke kjøpe en ny telefon for å få bedre personvern. Her er praktiske tiltak for Android og iPhone, samt alternativer for deg som ønsker mer kontroll.",
+    "sections": [
+      [
+        "Start med sikkerhetsoppdateringer",
+        "Installer oppdateringer til operativsystemet og appene. Kontroller hvor lenge telefonen får sikkerhetsoppdateringer fra produsenten. En telefon uten oppdateringer kan være utsatt selv om personverninnstillingene er gode."
+      ],
+      [
+        "Grunnleggende: Kontroller appenes tillatelser",
+        "På iPhone finner du relevante valg under Innstillinger og Personvern og sikkerhet. På Android kan du søke etter tillatelsesbehandling eller personvern i innstillingene. Gå gjennom kamera, mikrofon, kontakter, bilder og posisjon. Gi bare tilgang som er nødvendig, gjerne bare mens appen brukes. Menynavn varierer med versjon og produsent."
+      ],
+      [
+        "Begrens posisjon og sporing",
+        "Velg omtrentlig posisjon der nøyaktig posisjon ikke trengs. Undersøk bakgrunnstilgang og posisjonshistorikk. På iPhone kan du gjennomgå Sporingsvalg under Personvern og sikkerhet. På Android kan du søke etter annonser, annonse-ID og annonsepersonvern. Disse innstillingene begrenser enkelte former for sporing, men stopper ikke all datainnsamling."
+      ],
+      [
+        "Sikre telefonen",
+        "Bruk en sterk PIN-kode eller et passord, kort automatisk låsetid og eventuelt fingeravtrykk eller ansiktsgjenkjenning. Moderne telefoner har normalt innebygd lagringskryptering. Skjul sensitive varsler på låseskjermen og kontroller funksjoner for å finne eller fjernslette en mistet telefon."
+      ],
+      [
+        "Rydd i apper og kontoer",
+        "Avinstaller apper du ikke bruker. Kontroller hvilke kontoer som er koblet til telefonen, og hvilke data som synkroniseres. Avinstallering av en app sletter ikke nødvendigvis kontoen eller opplysninger hos leverandøren."
+      ],
+      [
+        "Sikkerhetskopier og skylagring",
+        "Kontroller hva som sikkerhetskopieres til iCloud, Google eller andre tjenester. Undersøk hvilke data som er ende-til-ende-kryptert og hvordan gjenoppretting fungerer. Ta vare på nødvendige gjenopprettingskoder. Ikke slå av sikkerhetskopiering uten en fungerende alternativ løsning."
+      ],
+      [
+        "Velg apper med omtanke",
+        "Bruk pålitelige distribusjonskanaler, sjekk utvikleren og hold appene oppdatert. Vurder om du trenger en app eller kan bruke nettleseren. Åpen kildekode kan gjøre innsyn enklere, men er ikke alene en garanti for sikkerhet eller personvern."
+      ],
+      [
+        "Avansert: F-Droid",
+        "F-Droid er en alternativ distribusjonskanal for fri og åpen kildekodeprogramvare på Android. Undersøk appens vedlikehold, signering og oppdateringsrutiner. Alternative appbutikker kan ha andre sikkerhetsmodeller enn produsentens butikk. Unngå tilfeldige APK-filer fra ukjente nettsteder."
+      ],
+      [
+        "Avansert: GrapheneOS",
+        "GrapheneOS er et sikkerhets- og personvernorientert Android-basert operativsystem for utvalgte Google Pixel-modeller. Det tilbyr blant annet ekstra sikkerhetsmekanismer og mulighet for Google Play i en begrenset app-sandkasse. Kontroller offisiell enhetsstøtte før du vurderer installasjon."
+      ],
+      [
+        "Avansert: CalyxOS og /e/OS",
+        "CalyxOS og /e/OS er Android-baserte prosjekter som søker å redusere avhengigheten av Google-tjenester. De har ulike modeller for appkompatibilitet, tjenester og oppdateringer. Kontroller aktiv prosjektstatus, sikkerhetsoppdateringer og støtte for akkurat din telefon før du velger. Vi har ikke verifisert dagens enhetslister."
+      ],
+      [
+        "Før du bytter operativsystem",
+        "Et systembytte kan slette alle data og påvirke sikkerhetsfunksjoner, BankID, Vipps, bankapper og andre tjenester. Kontroller kompatibilitet og oppdateringsstøtte, ta en sikkerhetskopi og følg prosjektets offisielle installasjonsveiledning. Ikke anta at et alternativt system er sikrere bare fordi det har færre Google-tjenester."
+      ],
+      [
+        "Fem tiltak du kan gjøre i dag",
+        "Oppdater telefonen, fjern ubrukte apper, gjennomgå tillatelser, begrens sporing og kontroller sikkerhetskopiene. Dette er et godt utgangspunkt uansett telefon. Vi har ikke gjennomført egne tester av de alternative operativsystemene."
+      ]
+    ],
+    "links": [
+      [
+        "Apple – brukerstøtte",
+        "https://support.apple.com/no-no"
+      ],
+      [
+        "Android – brukerstøtte",
+        "https://support.google.com/android/"
+      ],
+      [
+        "F-Droid",
+        "https://f-droid.org/"
+      ],
+      [
+        "GrapheneOS",
+        "https://grapheneos.org/"
+      ],
+      [
+        "CalyxOS",
+        "https://calyxos.org/"
+      ],
+      [
+        "/e/OS",
+        "https://e.foundation/"
+      ],
+      [
+        "Les også: Hvilken meldingstjeneste beskytter personvernet ditt best?",
+        "/laer/hvilken-meldingstjeneste-beskytter-personvernet/"
+      ],
+      [
+        "Les også: Hvilken passordadministrator bør du velge?",
+        "/laer/hvilken-passordadministrator-bor-du-velge/"
+      ]
+    ]
+  },
+  {
     "slug": "hvilken-meldingstjeneste-beskytter-personvernet",
     "publishedAt": "2026-11-26",
     "updatedAt": "2026-11-26",
