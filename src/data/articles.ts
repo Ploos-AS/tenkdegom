@@ -1,5 +1,80 @@
 export const articles = [
   {
+    "slug": "slik-avslorer-du-digital-svindel",
+    "publishedAt": "2026-11-26",
+    "updatedAt": "2026-11-26",
+    "title": "Slik avslører du digital svindel",
+    "intro": "Svindlere spiller ofte på tillit, frykt og tidspress. Lær å kjenne igjen faresignalene og hva du bør gjøre hvis du blir lurt.",
+    "sections": [
+      [
+        "Stopp, undersøk og tenk deg om",
+        "En uventet melding, et godt tilbud eller en telefon fra noen som hevder å være banken kan virke troverdig. Ikke la tidspress bestemme for deg. Avslutt samtalen eller legg bort meldingen, og kontakt virksomheten gjennom en kanal du finner selv."
+      ],
+      [
+        "Falske SMS-er og e-poster",
+        "Meldinger om pakker, ubetalte regninger eller sperrede kontoer kan være forsøk på phishing. Avsendernavn og telefonnumre kan forfalskes. Ikke stol på en melding bare fordi den ser profesjonell ut. Åpne heller den vanlige appen eller skriv inn nettstedets kjente adresse selv."
+      ],
+      [
+        "Når noen hevder å være banken eller politiet",
+        "Ikke oppgi BankID-passord, engangskoder eller kortopplysninger til en innringer. Ikke godkjenn en BankID-forespørsel du ikke selv har startet, installer fjernstyringsprogram på oppfordring eller overfør penger til en påstått sikker konto. Ring banken eller politiet på et nummer du finner selv."
+      ],
+      [
+        "Falske nettbutikker og tilbud",
+        "Undersøk hvem som står bak butikken, kontaktinformasjon, vilkår og uavhengige erfaringer. Vær skeptisk til urealistiske priser og krav om betaling utenfor etablerte betalingsløsninger. HTTPS og hengelåssymbolet viser at forbindelsen er kryptert, ikke at butikken er pålitelig."
+      ],
+      [
+        "Investeringssvindel",
+        "Vær skeptisk til løfter om garantert høy avkastning, tidspress og personer som ber deg overføre penger eller kryptovaluta. Kontroller virksomheten i Finanstilsynets registre og markedsadvarsler. Fravær av en advarsel betyr ikke at tilbudet er trygt."
+      ],
+      [
+        "Kjærlighetssvindel",
+        "En person du har blitt kjent med på nett kan bygge tillit over lang tid før vedkommende ber om penger. Vær særlig oppmerksom på gjentatte kriser, hemmelighold og press. Snakk med noen du stoler på før du sender penger. Ikke la skam hindre deg i å be om hjelp."
+      ],
+      [
+        "KI-genererte stemmer, bilder og videoer",
+        "En stemme eller video som ligner noen du kjenner, er ikke nødvendigvis ekte. Ved en uventet forespørsel om penger eller sensitiv informasjon, ring personen på et kjent nummer. Ikke baser avgjørelsen bare på om stemmen eller bildet virker overbevisende."
+      ],
+      [
+        "Svindel med QR-koder",
+        "En QR-kode er ikke en garanti for at lenken er trygg. Kontroller adressen før du åpner den, og bruk heller den offisielle appen ved betaling eller innlogging. Vær oppmerksom på koder som kan være klistret over originale skilt."
+      ],
+      [
+        "Hvis du allerede har blitt svindlet",
+        "Kontakt banken straks dersom penger, kort eller BankID kan være berørt. Sikre kompromitterte kontoer fra en enhet du stoler på, ta vare på relevant dokumentasjon og anmeld forholdet. Ikke betal personer som lover å hente tilbake tapte penger. Se også vår guide om ID-tyveri."
+      ],
+      [
+        "Det viktigste å huske",
+        "Svindel kan ramme alle. Gode rutiner er viktigere enn å kunne gjenkjenne alle typer svindel. Ta deg tid, kontroller gjennom en uavhengig kanal og be om hjelp når du er usikker."
+      ]
+    ],
+    "links": [
+      [
+        "Nettvett.no",
+        "https://nettvett.no/"
+      ],
+      [
+        "Sikkert.no",
+        "https://sikkert.no/"
+      ],
+      [
+        "Politiet",
+        "https://www.politiet.no/"
+      ],
+      [
+        "Finanstilsynet",
+        "https://www.finanstilsynet.no/"
+      ],
+      [
+        "Les også: Hva gjør du hvis du blir utsatt for ID-tyveri?",
+        "/laer/hva-gjor-du-ved-id-tyveri/"
+      ],
+      [
+        "Hjelp og ressurser",
+        "/ressurser/"
+      ]
+    ]
+  },
+  {
     "slug": "hva-gjor-du-ved-id-tyveri",
     "publishedAt": "2026-11-26",
     "updatedAt": "2026-11-26",
