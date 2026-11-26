@@ -1,5 +1,92 @@
 export const articles = [
   {
+    "slug": "digitalt-liv-uten-google-og-microsoft",
+    "publishedAt": "2026-11-26",
+    "updatedAt": "2026-11-26",
+    "title": "Kan du leve digitalt uten Google og Microsoft?",
+    "intro": "Du trenger ikke bytte alle digitale tjenester samtidig. Med åpne standarder og gode alternativer kan du gradvis få større kontroll over dataene og den digitale hverdagen din.",
+    "sections": [
+      [
+        "Begynn med behovene dine",
+        "Lag en oversikt over tjenester, kontoer, abonnementer og enheter du bruker. Skill mellom det du kan velge selv, og det arbeidsgiver, skole eller offentlige tjenester krever. Målet kan være mindre leverandørbinding, ikke fullstendig uavhengighet."
+      ],
+      [
+        "Operativsystem og kontorprogrammer",
+        "Linux kan erstatte Windows for mange hverdagsoppgaver. LibreOffice og ONLYOFFICE er alternativer til Microsoft Office. Prøv dokumenter, makroer, utskrift, tilgjengelighetsverktøy og spesialprogrammer før du bytter. Åpne dokumentformater som ODF kan gjøre senere migrering enklere."
+      ],
+      [
+        "Nettleser og søkemotor",
+        "Firefox og Brave er alternativer til Chrome og Edge. DuckDuckGo, Brave Search og Qwant er mulige alternativer til Google Søk. Brave bygger på Chromium, og enkelte søketjenester bruker resultater fra Google eller Bing. Et bytte betyr derfor ikke nødvendigvis full teknologisk uavhengighet."
+      ],
+      [
+        "E-post, kalender og kontakter",
+        "Proton Mail, Tuta og Infomaniak tilbyr alternativer til Gmail og Outlook. Et eget e-postdomene kan gjøre leverandørbytte enklere, dersom du beholder kontrollen over domenet. Undersøk støtte for IMAP, CalDAV, CardDAV og eksport; ikke alle leverandører støtter disse direkte. Krypterte tjenester kan kreve egne klienter."
+      ],
+      [
+        "Filer og samarbeid",
+        "Nextcloud, Proton Drive og kDrive er mulige alternativer til Google Drive og OneDrive. Vurder deling, dokumentredigering, synkronisering, gjenoppretting og lagringskostnader. Selvhosting gir mer kontroll, men krever sikker drift. Synkronisering erstatter ikke en uavhengig sikkerhetskopi."
+      ],
+      [
+        "Meldinger og passord",
+        "Signal, Threema og Matrix kan være alternativer til etablerte meldingstjenester. Bitwarden, KeePassXC og Proton Pass kan redusere avhengigheten av passordlagring i nettleseren. Sjekk hvilke tjenester kontaktene dine faktisk kan bruke, og hvordan passord og passnøkler kan flyttes."
+      ],
+      [
+        "Mobiltelefonen",
+        "Du kan redusere Google-avhengigheten på Android ved å velge andre apper og begrense synkronisering. GrapheneOS og /e/OS er mer omfattende alternativer for støttede enheter. Undersøk sikkerhetsoppdateringer og kompatibilitet med BankID, Vipps og bankapper før et systembytte."
+      ],
+      [
+        "En migreringsplan i fem steg",
+        "1. Kartlegg kontoer og ta sikkerhetskopier. 2. Bytt nettleser og søkemotor. 3. Flytt passord og prøv alternative kontorprogrammer. 4. Flytt e-post, kalender og filer gradvis, og test gjenoppretting. 5. Vurder operativsystem og mobilplattform når de viktigste tjenestene fungerer. Behold gamle kontoer til du har kontrollert innlogginger, abonnementer og dataeksport."
+      ],
+      [
+        "Kostnader og kompromisser",
+        "Gratis tjenester kan finansieres gjennom annonser, betalte abonnementer eller donasjoner. Egen drift koster tid og ressurser. Betalte tjenester er ikke automatisk mer private. Sammenlign totalpris, support, tilgjengelighet, databehandling og muligheten for å bytte leverandør senere."
+      ],
+      [
+        "Digital selvbestemmelse fremfor alt eller ingenting",
+        "Åpne standarder, eksportmuligheter, sikkerhetsoppdateringer og uavhengige sikkerhetskopier gir et bedre utgangspunkt. Behold tjenester du trenger, og bytt der alternativene fungerer. Vi har ikke gjennomført en samlet kompatibilitetstest av løsningene. Ploos AS, utgiveren av Tenk deg om, har et kommersielt kundeforhold til Proton. Artikkelen har ingen affiliatelenker."
+      ]
+    ],
+    "links": [
+      [
+        "Nettlesere",
+        "/laer/hvilken-nettleser-beskytter-personvernet/"
+      ],
+      [
+        "Søkemotorer",
+        "/laer/alternativer-til-google-sok/"
+      ],
+      [
+        "E-post",
+        "/laer/alternativer-til-gmail-og-outlook/"
+      ],
+      [
+        "Skylagring",
+        "/laer/alternativer-til-google-drive-og-onedrive/"
+      ],
+      [
+        "Passordadministratorer",
+        "/laer/hvilken-passordadministrator-bor-du-velge/"
+      ],
+      [
+        "Meldingstjenester",
+        "/laer/hvilken-meldingstjeneste-beskytter-personvernet/"
+      ],
+      [
+        "Personvern på mobiltelefonen",
+        "/laer/bedre-personvern-pa-mobiltelefonen/"
+      ],
+      [
+        "LibreOffice",
+        "https://www.libreoffice.org/"
+      ],
+      [
+        "ONLYOFFICE",
+        "https://www.onlyoffice.com/"
+      ]
+    ]
+  },
+  {
     "slug": "bedre-personvern-pa-mobiltelefonen",
     "publishedAt": "2026-11-26",
     "updatedAt": "2026-11-26",
