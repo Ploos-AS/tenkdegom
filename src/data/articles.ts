@@ -1,5 +1,104 @@
 export const articles = [
   {
+    "slug": "hvilken-passordadministrator-bor-du-velge",
+    "publishedAt": "2026-11-26",
+    "updatedAt": "2026-11-26",
+    "title": "Hvilken passordadministrator bør du velge?",
+    "intro": "En passordadministrator gjør det enklere å bruke sterke, unike passord. Her sammenligner vi åtte løsninger, fra enkle skytjenester til lokale og selvhostede alternativer.",
+    "sections": [
+      [
+        "Hvorfor bruke en passordadministrator?",
+        "Bruk et unikt, tilfeldig passord for hver konto. En passordadministrator kan generere og lagre disse i et kryptert hvelv. Beskytt hvelvet med et sterkt hovedpassord der løsningen bruker dette, og aktiver tofaktorautentisering der det er tilgjengelig."
+      ],
+      [
+        "Bitwarden",
+        "En passordadministrator med åpen kildekode, gratis grunnfunksjoner og betalte alternativer for enkeltpersoner, familier og virksomheter. Tilbyr synkronisering, passnøkler og mulighet for egen drift."
+      ],
+      [
+        "Proton Pass",
+        "En passordadministrator med åpen kildekode i klientene, kryptert synkronisering, passnøkler og e-postaliaser. Gratis og betalte abonnementer har ulike funksjoner. Ploos AS, som utgir Tenk deg om, har et kommersielt kundeforhold til Proton. Denne artikkelen inneholder ingen affiliatelenker."
+      ],
+      [
+        "KeePassXC",
+        "En åpen kildekodeløsning for lokal lagring i en kryptert KDBX-database. Ingen abonnementskostnad for programmet. Du styrer selv sikkerhetskopiering og eventuell synkronisering. På mobil trenger du en kompatibel app; støtte for passnøkler avhenger av klient og integrasjon."
+      ],
+      [
+        "1Password",
+        "En kommersiell abonnementstjeneste med familie- og bedriftsfunksjoner, synkronisering og passnøkler. Den bruker blant annet en separat Secret Key i tillegg til kontopassordet i sitt tradisjonelle kontooppsett. Produktet er ikke fullt ut åpen kildekode."
+      ],
+      [
+        "Vaultwarden",
+        "En uoffisiell, åpen kildekodeimplementasjon av en server som er kompatibel med mange Bitwarden-klienter. Selvhosting gir kontroll over serveren, men krever oppdateringer, sikkerhetskopiering, sikker tilgang og oppfølging av kompatibilitet. Det er ikke Bitwardens offisielle serverprodukt."
+      ],
+      [
+        "Psono",
+        "En passordadministrator med åpen kildekodekomponenter og selvhosting, rettet blant annet mot team og virksomheter. Gratis og kommersielle utgaver har ulike funksjoner. Undersøk klientstøtte, deling, administrasjon og krav til drift før du velger."
+      ],
+      [
+        "Apple Passwords",
+        "Et integrert alternativ for Apple-brukere med passord, passnøkler og synkronisering via iCloud-nøkkelring. Ingen separat abonnementskostnad for grunnfunksjonen. Godt egnet i Apples økosystem, men undersøk kompatibilitet hvis du også bruker Linux, Android eller andre plattformer."
+      ],
+      [
+        "Google Password Manager",
+        "Et integrert alternativ i Chrome og Android med passordgenerering, synkronisering og passnøkler. Grunnfunksjonen krever ikke et separat betalt abonnement. Vurder avhengigheten av Google-kontoen og hvor godt løsningen fungerer på alle enhetene dine."
+      ],
+      [
+        "Sky, lokal lagring eller selvhosting?",
+        "En leverandørdriftet tjeneste gjør synkronisering og vedlikehold enklere. Lokal lagring gir kontroll over databasefilen, men krever egne sikkerhetskopier. Selvhosting gir kontroll over servermiljøet, men flytter driftsansvaret til deg. Ingen av modellene er automatisk sikrest."
+      ],
+      [
+        "Passnøkler og familiedeling",
+        "Passnøkler kan redusere risikoen for phishing ved å knytte innlogging til riktig nettsted. Kontroller støtte på alle enhetene dine og hvordan gjenoppretting og eventuell flytting fungerer. Bruk egne kontoer og delte hvelv for familien fremfor å dele hovedpassord."
+      ],
+      [
+        "Slik velger du",
+        "Sammenlign totalpris, plattformstøtte, krypteringsmodell, gjenoppretting, eksport og uavhengige sikkerhetsrevisjoner. Bitwarden og Proton Pass er aktuelle for enkel synkronisering, KeePassXC for lokal kontroll, 1Password for betalt familiebruk og Vaultwarden eller Psono for erfarne driftere. Integrerte løsninger kan være et godt første steg. Vi har ikke gjennomført en egen sikkerhetsrevisjon eller praktisk produkttest."
+      ],
+      [
+        "Kom trygt i gang",
+        "Installer fra en offisiell kilde. Sikre kontoen og oppbevar nødvendige gjenopprettingskoder trygt utenfor hvelvet. Flytt passord gradvis, bytt gjenbrukte passord og kontroller at innlogging fungerer. Pass på at eksportfiler kan inneholde ukrypterte passord; håndter dem sikkert og fjern dem når de ikke lenger trengs."
+      ]
+    ],
+    "links": [
+      [
+        "Bitwarden",
+        "https://bitwarden.com/"
+      ],
+      [
+        "Proton Pass",
+        "https://proton.me/pass"
+      ],
+      [
+        "KeePassXC",
+        "https://keepassxc.org/"
+      ],
+      [
+        "1Password",
+        "https://1password.com/"
+      ],
+      [
+        "Vaultwarden – kildekode",
+        "https://github.com/dani-garcia/vaultwarden"
+      ],
+      [
+        "Psono",
+        "https://psono.com/"
+      ],
+      [
+        "Apple – brukerstøtte",
+        "https://support.apple.com/no-no"
+      ],
+      [
+        "Google Password Manager",
+        "https://passwords.google.com/"
+      ],
+      [
+        "Les også: Beskytt kontoene dine",
+        "/laer/beskytt-kontoene-dine/"
+      ]
+    ]
+  },
+  {
     "slug": "alternativer-til-google-sok",
     "publishedAt": "2026-11-26",
     "updatedAt": "2026-11-26",
