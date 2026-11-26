@@ -9,9 +9,9 @@ const checklistGroups = [
   { heading: 'Sporing og gode vaner', start: 8, items: ['Kontroller nettleserens sporingsbeskyttelse.', 'Vær forsiktig med uventede lenker.', 'Tenk deg om før du deler personopplysninger med KI-tjenester.'] }
 ];
 ---
-<SiteLayout title={article.title} description={article.intro}>
-<article><p><a href="/laer/">← Alle artikler</a></p><h1>{article.title}</h1><p class="lead">{article.intro}</p>
-<p class="note">Publisert: <time datetime={article.publishedAt}>{new Intl.DateTimeFormat("nb-NO",{dateStyle:"long",timeZone:"UTC"}).format(new Date(`${article.publishedAt}T12:00:00Z`))}</time> · Sist oppdatert: <time datetime={article.updatedAt}>{new Intl.DateTimeFormat("nb-NO",{dateStyle:"long",timeZone:"UTC"}).format(new Date(`${article.updatedAt}T12:00:00Z`))}</time></p>
+<SiteLayout title={article.title} description={article.intro} articleMeta={{ publishedAt: article.publishedAt, updatedAt: article.updatedAt }}>
+<article itemscope itemtype="https://schema.org/Article"><meta itemprop="inLanguage" content="nb" /><meta itemprop="mainEntityOfPage" content={new URL(Astro.url.pathname, Astro.site).toString()} /><span itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="Ploos AS" /><link itemprop="url" href="https://www.ploos.no/" /></span><p><a href="/laer/">← Alle artikler</a></p><h1 itemprop="headline">{article.title}</h1><p class="lead" itemprop="description">{article.intro}</p>
+<p class="note">Publisert: <time itemprop="datePublished" datetime={article.publishedAt}>{new Intl.DateTimeFormat("nb-NO",{dateStyle:"long",timeZone:"UTC"}).format(new Date(`${article.publishedAt}T12:00:00Z`))}</time> · Sist oppdatert: <time itemprop="dateModified" datetime={article.updatedAt}>{new Intl.DateTimeFormat("nb-NO",{dateStyle:"long",timeZone:"UTC"}).format(new Date(`${article.updatedAt}T12:00:00Z`))}</time></p>
 {article.slug === 'ti-enkle-personverngrep' ? (
   <>
     <p class="note">Kryss av etter hvert som du gjør tiltakene. Avkrysningene lagres ikke eller sendes til serveren, og nullstilles når siden lastes på nytt.</p>
