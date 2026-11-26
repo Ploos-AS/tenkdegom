@@ -1,5 +1,84 @@
 export const articles = [
   {
+    "slug": "hva-er-digital-suverenitet",
+    "publishedAt": "2026-11-26",
+    "updatedAt": "2026-11-26",
+    "title": "Hva er digital suverenitet?",
+    "intro": "Hvem bestemmer over dataene dine, programvaren du bruker og infrastrukturen samfunnet er avhengig av? Digital suverenitet handler om muligheten til å ta egne valg og beholde kontroll.",
+    "sections": [
+      [
+        "Tre sider av digital selvbestemmelse",
+        "Personvern handler om hvordan personopplysninger behandles. Datasikkerhet handler blant annet om konfidensialitet, integritet og tilgjengelighet. Digital suverenitet handler om evnen til å bestemme over teknologi, data og avhengigheter. Begrepene overlapper, men er ikke det samme."
+      ],
+      [
+        "Individet",
+        "For privatpersoner kan digital suverenitet bety å kunne eksportere bilder, flytte e-post, velge programvare og bytte leverandør uten å miste tilgang til viktige data. Et eget domene, åpne filformater og uavhengige sikkerhetskopier kan bidra til større kontroll."
+      ],
+      [
+        "Virksomheten",
+        "Virksomheter bør vite hvem som behandler dataene deres, hvilke underleverandører som brukes, og hvordan tjenester kan erstattes. Avtaler, dokumenterte eksportmuligheter, beredskap og en realistisk exit-plan kan redusere avhengigheten av én leverandør."
+      ],
+      [
+        "Samfunnet",
+        "På samfunnsnivå handler digital suverenitet blant annet om evnen til å opprettholde kritiske tjenester, håndheve lover og utvikle teknologisk kompetanse. Internasjonalt samarbeid og handel kan være viktige deler av dette. Full nasjonal selvforsyning er verken alltid mulig eller nødvendig."
+      ],
+      [
+        "Leverandørbinding",
+        "Leverandørbinding oppstår når det blir vanskelig eller kostbart å flytte data, arbeidsprosesser eller systemer. Proprietære formater, integrasjoner, kompetansebehov og kontrakter kan bidra. Test eksport og gjenoppretting før du trenger å bytte."
+      ],
+      [
+        "Åpen kildekode og åpne standarder",
+        "Åpen kildekode kan gi mulighet til å undersøke, tilpasse og videreføre programvare innenfor lisensvilkårene. Åpne standarder kan gjøre ulike systemer mer kompatible. Ingen av delene garanterer sikkerhet, aktivt vedlikehold eller uavhengighet fra eksterne tjenester."
+      ],
+      [
+        "Norsk og europeisk hosting",
+        "Lagring i Norge eller EØS kan være relevant for krav til databehandling, beredskap og kontrakter. Undersøk også leverandørens eierskap, underleverandører, fjernadministrasjon, sikkerhetskopier og tilgang til krypteringsnøkler. Serverens geografiske plassering alene avgjør ikke hvilke lover eller risikoer som er relevante."
+      ],
+      [
+        "Jurisdiksjon og personvern",
+        "GDPR regulerer behandling av personopplysninger og stiller særskilte krav ved overføring til tredjeland. Det er ikke et generelt krav om at alle personopplysninger må lagres i Norge eller EØS. Virksomheter må vurdere aktuelle overføringsgrunnlag, risikoer og eventuelle sektorkrav. Utenlandsk eierskap eller europeisk hosting gir ikke alene svaret på om en løsning er lovlig."
+      ],
+      [
+        "Selvhosting eller kjøp av tjenester?",
+        "Egen drift kan gi større kontroll over konfigurasjon, data og nøkler, men krever kompetanse, oppdateringer, overvåking og beredskap. En driftet tjeneste kan være et bedre valg dersom leverandøren kan tilby forsvarlig sikkerhet og gode vilkår for flytting. Vurder total kostnad og faktisk kontroll."
+      ],
+      [
+        "Praktiske steg mot større digital suverenitet",
+        "Kartlegg avhengigheter, velg åpne formater der det fungerer, kontroller eksportmuligheter og ta uavhengige sikkerhetskopier. For virksomheter bør dette suppleres med risikovurdering, leverandøravtaler og regelmessige beredskapsøvelser. Prioriter de viktigste tjenestene først."
+      ],
+      [
+        "Kontroll fremfor geografiske merkelapper",
+        "Digital suverenitet er ikke et spørsmål om å avvise all utenlandsk teknologi. Det handler om reelle valgmuligheter, ansvarlig risikohåndtering og evnen til å fortsette dersom en leverandør eller tjeneste forsvinner. Ploos AS, som utgir Tenk deg om, utvikler og tilbyr digitale tjenester. Artikkelen inneholder ingen affiliatelenker."
+      ]
+    ],
+    "links": [
+      [
+        "Datatilsynet",
+        "https://www.datatilsynet.no/"
+      ],
+      [
+        "Nasjonal sikkerhetsmyndighet",
+        "https://nsm.no/"
+      ],
+      [
+        "Digitaliseringsdirektoratet",
+        "https://www.digdir.no/"
+      ],
+      [
+        "Les også: Kan du leve digitalt uten Google og Microsoft?",
+        "/laer/digitalt-liv-uten-google-og-microsoft/"
+      ],
+      [
+        "Les også: Alternativer til Google Drive og OneDrive",
+        "/laer/alternativer-til-google-drive-og-onedrive/"
+      ],
+      [
+        "Les også: Hvilke rettigheter har du etter GDPR?",
+        "/laer/hvilke-rettigheter-har-du-etter-gdpr/"
+      ]
+    ]
+  },
+  {
     "slug": "digitalt-liv-uten-google-og-microsoft",
     "publishedAt": "2026-11-26",
     "updatedAt": "2026-11-26",
