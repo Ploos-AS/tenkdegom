@@ -1,5 +1,100 @@
 export const articles = [
   {
+    "slug": "alternativer-til-google-sok",
+    "publishedAt": "2026-11-26",
+    "updatedAt": "2026-11-26",
+    "title": "Alternativer til Google Søk",
+    "intro": "Du trenger ikke bruke Google for å finne informasjon på nettet. Her er åtte alternativer med ulike styrker innen personvern, søkekvalitet og uavhengighet.",
+    "sections": [
+      [
+        "Personvern er ikke det samme som uavhengighet",
+        "En søkemotor kan begrense profilering selv om den henter resultater fra andre leverandører. En egen søkeindeks gir større teknologisk uavhengighet, men garanterer ikke personvern. Undersøk også hvilke data som lagres, hvor de behandles og hvordan tjenesten finansieres."
+      ],
+      [
+        "DuckDuckGo",
+        "Et enkelt alternativ med personvern som hovedprofil. Søkeresultatene bygger på flere kilder, blant annet Bing. Tjenesten finansieres blant annet med annonser knyttet til søket fremfor en personlig annonseprofil. Prøv den som daglig søkemotor."
+      ],
+      [
+        "Startpage",
+        "Et alternativ for deg som liker Google-resultater, men ønsker mindre direkte eksponering av søkene dine overfor Google. Startpage formidler resultater fra eksterne leverandører og har en funksjon for å besøke enkelte nettsider via en mellomtjener. Tjenesten er annonsefinansiert."
+      ],
+      [
+        "Brave Search",
+        "Brave har utviklet en egen søkeindeks og er et interessant valg dersom du ønsker mindre avhengighet av Google og Bing. Tjenesten tilbyr annonser og betalte alternativer. Undersøk innstillingene for eventuelle tilleggskilder og KI-funksjoner."
+      ],
+      [
+        "Qwant",
+        "En fransk søketjeneste med personvern som del av profilen. Qwant har arbeidet med europeisk søkeinfrastruktur, men bruk av eksterne resultatkilder kan variere. Europeisk eierskap alene betyr ikke at alle data eller teknologier er europeiske."
+      ],
+      [
+        "Mojeek",
+        "En britisk søkemotor med egen søkeindeks og personvern som hovedprofil. Den er interessant for teknologisk uavhengighet, men resultatene for små norske steder og spesialiserte norske emner kan avvike fra større søkemotorer."
+      ],
+      [
+        "Ecosia",
+        "En søkemotor med miljø og treplanting som sentral del av forretningsmodellen. Annonseinntekter bidrar til finansieringen. Ecosia bruker eksterne søketeknologier og har arbeidet med europeisk søkeinfrastruktur. Miljøprofil og personvern bør vurderes hver for seg."
+      ],
+      [
+        "Kagi",
+        "En abonnementsbasert, reklamefri søkemotor som kombinerer flere resultatkilder og egne søketeknologier. Du betaler for tjenesten fremfor å se annonser. Konto og betaling innebærer likevel behandling av personopplysninger."
+      ],
+      [
+        "SearXNG",
+        "Et åpent kildekodeprosjekt for metasøk. Det samler resultater fra konfigurerbare søkemotorer og kan driftes på egen server. En offentlig instans krever tillit til operatøren; selvhosting gir mer kontroll, men også ansvar for drift og sikkerhet. SearXNG er ikke en egen generell søkeindeks."
+      ],
+      [
+        "Hva fungerer best på norsk?",
+        "Prøv de samme søkene hos flere tjenester: lokale butikker, kommunale tjenester, norske nyheter og faguttrykk. Vurder relevans, oppdaterte treff og mengden annonser. Vi har ikke gjennomført en standardisert test av norsk søkekvalitet, så vi rangerer ikke tjenestene etter dette."
+      ],
+      [
+        "Slik kommer du i gang",
+        "Velg en alternativ søkemotor som standard i nettleserens søkeinnstillinger. Du kan fortsatt bruke andre søkemotorer ved behov. Husk at søkemotorens personvern ikke automatisk beskytter deg mot sporing på nettsidene du besøker."
+      ],
+      [
+        "Hvilken bør du velge?",
+        "Prøv DuckDuckGo eller Startpage for en enkel overgang, Brave Search eller Mojeek dersom egen indeks er viktig, og Qwant eller Ecosia dersom europeisk teknologi er en prioritet. Kagi er aktuelt hvis du vil betale for reklamefrihet, mens SearXNG passer for deg som ønsker teknisk kontroll. Les gjeldende personvernvilkår før du velger."
+      ]
+    ],
+    "links": [
+      [
+        "DuckDuckGo",
+        "https://duckduckgo.com/"
+      ],
+      [
+        "Startpage",
+        "https://www.startpage.com/"
+      ],
+      [
+        "Brave Search",
+        "https://search.brave.com/"
+      ],
+      [
+        "Qwant",
+        "https://www.qwant.com/"
+      ],
+      [
+        "Mojeek",
+        "https://www.mojeek.com/"
+      ],
+      [
+        "Ecosia",
+        "https://www.ecosia.org/"
+      ],
+      [
+        "Kagi",
+        "https://kagi.com/"
+      ],
+      [
+        "SearXNG – dokumentasjon",
+        "https://docs.searxng.org/"
+      ],
+      [
+        "Les også: Hvilken nettleser beskytter personvernet ditt best?",
+        "/laer/hvilken-nettleser-beskytter-personvernet/"
+      ]
+    ]
+  },
+  {
     "slug": "hvilke-rettigheter-har-du-etter-gdpr",
     "publishedAt": "2026-11-26",
     "updatedAt": "2026-11-26",
