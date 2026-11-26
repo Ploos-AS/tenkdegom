@@ -957,7 +957,7 @@ export const articles = [
       ],
       [
         "Nextcloud: Du velger hvem som drifter",
-        "Nextcloud er åpen programvare for filer, synkronisering og samarbeid. Du kan drifte den selv eller kjøpe en driftet løsning. Det gir fleksibilitet, men også ansvar: oppdateringer, tilgangskontroll, sikkerhetskopier og overvåking må ivaretas av noen. Nextcloud kan bruke serverbasert kryptering, men dette skjuler ikke nødvendigvis filene for serveradministratoren. Ende-til-ende-kryptering finnes som en egen løsning med særskilte begrensninger. Ikke anta at selvhosting automatisk er tryggere enn en profesjonelt driftet tjeneste."
+        "Nextcloud er åpen programvare for filer, synkronisering og samarbeid. Du kan drifte den selv eller kjøpe en driftet løsning. Det gir fleksibilitet, men også ansvar: oppdateringer, tilgangskontroll, sikkerhetskopier og overvåking må ivaretas av noen. Nextcloud kan bruke serverbasert kryptering, men den beskytter ikke mot en kompromittert server eller en ondsinnet administrator. Filnavn og mappestruktur krypteres heller ikke av denne funksjonen. Ende-til-ende-kryptering finnes som en egen løsning med særskilte begrensninger. Ikke anta at selvhosting automatisk er tryggere enn en profesjonelt driftet tjeneste."
       ],
       [
         "Lagring i Europa er ikke det samme som ende-til-ende-kryptering",
@@ -972,7 +972,7 @@ export const articles = [
         "Når en fil slettes eller overskrives på én enhet, kan endringen synkroniseres til de andre. Papirkurv og versjonshistorikk kan hjelpe, men har begrensninger. Ha minst én separat sikkerhetskopi som ikke bare er en synkronisert mappe, og test at du kan gjenopprette viktige filer. Hvis du selv drifter Nextcloud, må du også sikre databasen, konfigurasjonen og eventuelle krypteringsnøkler."
       ],
       [
-        "Slik prøver du et alternativ uten risiko",
+        "Slik prøver du et alternativ med mindre risiko",
         "1. Opprett en konto eller testinstallasjon. 2. Aktiver tofaktorautentisering der det er tilgjengelig. 3. Last opp noen ufarlige testfiler og prøv synkronisering på dine enheter. 4. Test deling, rettigheter og gjenoppretting av en slettet fil. 5. Finn ut hvordan du eksporterer alt igjen. Flytt først viktige dokumenter når du vet at løsningen fungerer og har en separat sikkerhetskopi."
       ],
       [
@@ -1024,11 +1024,11 @@ export const articles = [
       ],
       [
         "Proton Mail: Kryptert e-post og flere personverntjenester",
-        "Proton tilbyr e-post sammen med blant annet kalender, skylagring og passordbehandling. Meldinger mellom Proton-brukere er automatisk ende-til-ende-kryptert. Vanlig e-post til andre leverandører er ikke automatisk ende-til-ende-kryptert, men du kan bruke passordbeskyttede meldinger. Proton støtter OpenPGP. På datamaskin kan betalte brukere benytte Proton Mail Bridge for e-postprogrammer som Thunderbird; dette er ikke vanlig direkte IMAP-tilgang på mobil. Vurder Proton hvis du ønsker kryptert e-post som del av et større økosystem."
+        "Proton tilbyr e-post sammen med blant annet kalender, skylagring og passordbehandling. Meldinger mellom Proton-brukere er automatisk ende-til-ende-kryptert. Vanlig e-post til andre leverandører er ikke automatisk ende-til-ende-kryptert, men du kan bruke passordbeskyttede meldinger. Proton støtter også OpenPGP for eksterne mottakere med egnet nøkkel. E-postprogrammet som brukes sammen med Bridge, kan lagre lokale kopier ukryptert. På datamaskin kan betalte brukere benytte Proton Mail Bridge for e-postprogrammer som Thunderbird; dette er ikke vanlig direkte IMAP-tilgang på mobil. Vurder Proton hvis du ønsker kryptert e-post som del av et større økosystem."
       ],
       [
         "Tuta: Sterkt fokus på kryptering",
-        "Tuta tilbyr e-post, kalender og kontakter med omfattende kryptering. Meldinger mellom Tuta-brukere er automatisk ende-til-ende-kryptert; kryptert kommunikasjon med eksterne mottakere kan skje med et avtalt passord. Tuta beskytter også emnefelt i sin egen krypterte løsning, men avsender- og mottakeradresser er fortsatt nødvendige metadata. Tuta bruker egne apper og nettleser, ikke vanlig IMAP i tredjeparts e-postprogrammer. Vurder Tuta hvis kryptering veier tyngre enn integrasjon med tradisjonelle e-postklienter."
+        "Tuta tilbyr e-post, kalender og kontakter med omfattende kryptering. Meldinger mellom Tuta-brukere er automatisk ende-til-ende-kryptert; kryptert kommunikasjon med eksterne mottakere kan skje med et avtalt passord. Tuta beskytter også emnefelt i sin krypterte løsning, men e-postadresser og tidspunkt for sending eller mottak er fortsatt synlige metadata. Vanlig ekstern e-post uten ende-til-ende-kryptering krypteres først for lagring når den når Tutas servere. Tuta bruker egne apper og nettleser, ikke vanlig IMAP i tredjeparts e-postprogrammer. Vurder Tuta hvis kryptering veier tyngre enn integrasjon med tradisjonelle e-postklienter."
       ],
       [
         "Infomaniak Mail og kSuite: E-post og samarbeid",
@@ -1060,6 +1060,7 @@ export const articles = [
         "Proton – støtte for e-postprogrammer via Bridge",
         "https://proton.me/support/imap-smtp-and-pop3-setup"
       ],
+      ["Proton – kryptering og lokale kopier med Bridge", "https://proton.me/support/messages-encrypted-via-bridge"],
       [
         "Tuta – kryptering",
         "https://tuta.com/encryption"
