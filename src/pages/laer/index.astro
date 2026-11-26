@@ -3,6 +3,7 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 import { articles } from '../../data/articles';
 
 const alternativeSlugs = new Set([
+  'hvilken-passordadministrator-bor-du-velge',
   'alternativer-til-google-sok',
   'hvilken-nettleser-beskytter-personvernet',
   'alternativer-til-google-drive-og-onedrive',
@@ -22,7 +23,7 @@ const fundamentals = articles.filter(article => !alternativeSlugs.has(article.sl
   </nav>
   <section aria-labelledby="personvernvennlige-alternativer">
     <h2 id="personvernvennlige-alternativer">Personvernvennlige alternativer</h2>
-    <p>Utforsk søkemotorer, nettlesere, e-post, skylagring og VPN – med fordeler, begrensninger og praktiske råd.</p>
+    <p>Utforsk passordadministratorer, søkemotorer, nettlesere, e-post, skylagring og VPN – med fordeler, begrensninger og praktiske råd.</p>
     <div class="cards">{alternatives.map(a => <article class="card"><h3><a href={`/laer/${a.slug}/`}>{a.title}</a></h3><p>{a.intro}</p></article>)}</div>
   </section>
   <section aria-labelledby="personvern-i-hverdagen">
