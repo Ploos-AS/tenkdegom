@@ -1,5 +1,72 @@
 export const articles = [
   {
+    "slug": "hvordan-slette-personopplysninger-pa-nettet",
+    "publishedAt": "2026-11-26",
+    "updatedAt": "2026-11-26",
+    "title": "Hvordan slette personopplysninger om deg selv på nettet?",
+    "intro": "Gamle profiler, uønskede bilder eller belastende søketreff? Her er en praktisk guide til å få fjernet opplysninger og finne hjelp.",
+    "sections": [
+      [
+        "Start med å finne informasjonen",
+        "Søk på navnet ditt og eventuelt gamle brukernavn. Noter nettadressene og hvem som står bak sidene. Skill mellom opplysninger du selv har publisert, innhold andre har lagt ut, og treff hos søkemotorer. Ikke spre krenkende materiale videre for å dokumentere det."
+      ],
+      [
+        "Hva sier personvernregelverket?",
+        "Artikkel 17 i personvernforordningen (GDPR) gir rett til sletting under bestemte vilkår, eksempelvis når opplysninger ikke lenger trengs, eller når samtykke trekkes tilbake og det ikke finnes annet behandlingsgrunnlag. Retten gjelder ikke alltid: ytringsfrihet, lovpålagt oppbevaring og rettskrav kan begrunne fortsatt behandling. Rent privat behandling kan falle utenfor regelverket."
+      ],
+      [
+        "Kontakt den som har publisert opplysningene",
+        "Finn kontaktinformasjonen eller personvernerklæringen til nettstedet. Oppgi hvilken informasjon du ønsker fjernet, nettadressen og hvorfor du ber om sletting. Be om skriftlig bekreftelse. Virksomheten skal normalt svare innen én måned; ved behov kan fristen forlenges med inntil to måneder dersom du får begrunnelse innen den første måneden. Bruk en sikker kanal dersom identiteten din må bekreftes."
+      ],
+      [
+        "Et eksempel på en sletteforespørsel",
+        "Hei. Jeg ber om at dere vurderer sletting av personopplysninger om meg på følgende nettadresse: [nettadresse]. Opplysningene jeg ønsker fjernet er [beskrivelse]. Begrunnelsen er [forklar hvorfor]. Jeg ber om sletting etter GDPR artikkel 17 der vilkårene er oppfylt. Bekreft gjerne skriftlig hva dere har gjort, eller forklar hvorfor opplysningene må beholdes."
+      ],
+      [
+        "Google og Bing: Fjern søketreff, ikke selve nettsiden",
+        "Du kan be søkemotorene om å fjerne treff knyttet til navnet ditt. Dette kalles avindeksering og vurderes individuelt. Informasjonen kan fortsatt være tilgjengelig via andre søk eller direkte lenker. Kontakt derfor også nettstedet. Datatilsynets veiledning nedenfor viser hvor du finner skjemaene for Google og Bing. Dersom kilden allerede er fjernet, kan du be søkemotoren oppdatere utdaterte treff."
+      ],
+      [
+        "Gamle kontoer og profiler",
+        "Finn kontoinnstillingene og se etter permanent sletting, ikke bare deaktivering. Ta vare på filer du trenger, og sjekk abonnementer og innlogginger til andre tjenester før du sletter kontoen. Har du mistet tilgangen, bruk leverandørens offisielle kontogjenoppretting eller kontakt brukerstøtte."
+      ],
+      [
+        "Uønskede bilder, falske profiler og trakassering",
+        "Bruk plattformens rapporteringsfunksjon for krenkende innhold eller identitetsmisbruk. Noter lenker, tidspunkt og relevant kommunikasjon. Ikke last ned eller videresend seksualiserte bilder av mindreårige. Ved trusler, utpressing eller mulig kriminalitet kan du kontakte politiet; ring 112 ved akutt fare. Slettmeg.no kan hjelpe deg med å finne riktig fremgangsmåte."
+      ],
+      [
+        "Hvis du ikke får hjelp",
+        "Be om en begrunnelse hvis en virksomhet avslår kravet ditt. Ta vare på korrespondansen. Ved spørsmål om personvernrettigheter eller avslag på en sletteforespørsel kan du kontakte Datatilsynet og undersøke klagemulighetene. Slettmeg.no gir praktisk veiledning om uønsket innhold på nett. Du finner flere norske hjelpetjenester på ressurssiden vår."
+      ],
+      [
+        "Et godt råd for fremtiden",
+        "Gå gjennom gamle kontoer jevnlig, begrens offentlig profilinformasjon og tenk over hva du deler. Sletting kan redusere tilgjengeligheten av informasjon, men kan ikke garantere at alle kopier forsvinner."
+      ]
+    ],
+    "links": [
+      [
+        "Datatilsynet – Rett til sletting",
+        "https://www.datatilsynet.no/rettigheter-og-plikter/den-registrertes-rettigheter/rett-til-sletting/"
+      ],
+      [
+        "Datatilsynet – Hvordan ber jeg om sletting av søketreff?",
+        "https://www.datatilsynet.no/personvern-pa-ulike-omrader/internett-og-apper/hvordan-slette-soketreff/"
+      ],
+      [
+        "Slettmeg.no – veiledning",
+        "https://slettmeg.no/"
+      ],
+      [
+        "Politiet",
+        "https://www.politiet.no/"
+      ],
+      [
+        "Hjelp og ressurser",
+        "/ressurser/"
+      ]
+    ]
+  },
+  {
     "slug": "hvilken-nettleser-beskytter-personvernet",
     "publishedAt": "2026-11-08",
     "updatedAt": "2026-11-08",
