@@ -1,8 +1,13 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import { articles } from '../../data/articles';
+import { relatedArticles } from '../../data/related-articles';
 export function getStaticPaths(){ return articles.map(article=>({params:{slug:article.slug},props:{article}})); }
 const { article } = Astro.props;
+const existingLinks = new Set<string>(article.links.map(([, url]) => url));
+const related = (relatedArticles[article.slug] ?? [])
+  .filter(slug => slug !== article.slug && !existingLinks.has(`/laer/${slug}/`))
+  .flatMap(slug => articles.filter(candidate => candidate.slug === slug));
 const checklistGroups = [
   { heading: 'Kontoer og enheter', start: 1, items: ['Oppdater mobil og PC.', 'Bruk unike, lange passord.', 'Slå på tofaktorautentisering.', 'Sjekk gjenopprettingsmetodene dine.'] },
   { heading: 'Apper og deling', start: 5, items: ['Fjern unødvendige app-tillatelser.', 'Slett apper du ikke bruker.', 'Gå gjennom tilgangen til delte filer og mapper.'] },
@@ -24,6 +29,7 @@ const checklistGroups = [
   </>
 ) : article.sections.map(([heading,body])=><section><h2>{heading}</h2><p>{body}</p></section>)}
 <h2>Les mer</h2><ul>{article.links.map(([label,url])=><li><a href={url}>{label}</a></li>)}</ul>
+{related.length > 0 && <section aria-labelledby="related-heading"><h2 id="related-heading">Relaterte artikler</h2><ul>{related.map(candidate => <li><a href={`/laer/${candidate.slug}/`}>{candidate.title}</a></li>)}</ul></section>}
 <p class="note">Denne artikkelen gir generell veiledning. Kontroller aktuelle innstillinger og vilkår hos tjenesteleverandøren.</p>
 </article>
 <style>
