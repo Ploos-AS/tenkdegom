@@ -1,5 +1,76 @@
 export const articles = [
   {
+    "slug": "hva-gjor-du-ved-id-tyveri",
+    "publishedAt": "2026-11-26",
+    "updatedAt": "2026-11-26",
+    "title": "Hva gjør du hvis du blir utsatt for ID-tyveri?",
+    "intro": "Mistenker du at noen misbruker identiteten din? Handle raskt. Her er tiltak som kan begrense skaden og hjelpe deg videre.",
+    "sections": [
+      [
+        "1. Kontakt banken med en gang",
+        "Ved mistanke om økonomisk misbruk, ring banken på et nummer du finner selv. Be om hjelp til å stoppe betalinger og sperre kort eller BankID som kan være kompromittert. Ikke godkjenn nye BankID-forespørsler på oppfordring fra en innringer."
+      ],
+      [
+        "2. Sikre e-post og andre kontoer",
+        "Bruk en enhet du stoler på. Bytt passord på e-postkontoen og berørte tjenester, avslutt ukjente innlogginger og sjekk gjenopprettingsinformasjon og videresending av e-post. Aktiver tofaktorautentisering. Hvis telefonnummeret ditt er overtatt, kontakt mobiloperatøren."
+      ],
+      [
+        "3. Dokumenter og anmeld",
+        "Lagre relevante meldinger, tidspunkt, fakturaer, transaksjoner og saksnumre. Anmeld identitetstyveriet så raskt som mulig. Bruk politiets veiledning for å finne riktig anmeldelseskanal; ta kontakt med politiet dersom du er usikker. Meld også fra til forsikringsselskapet dersom det er aktuelt."
+      ],
+      [
+        "4. Opprett frivillig kredittsperre",
+        "Kontakt kredittopplysningsforetakene for å sperre kredittvurderinger. Dette reduserer risikoen for nye kredittavtaler i ditt navn, men stopper ikke alle former for misbruk. Du kan også få behov for å oppheve sperren midlertidig ved egne legitime kredittsøknader."
+      ],
+      [
+        "5. Bestrid krav du ikke kjenner igjen",
+        "Kontakt avsenderen av ukjente fakturaer eller lånekrav gjennom offisielle kontaktkanaler. Forklar skriftlig at du bestrider kravet på grunn av mulig identitetsmisbruk. Ikke ignorer inkassovarsler; informer også inkassoforetaket dersom saken er sendt videre. Be om dokumentasjon og oppbevar svarene."
+      ],
+      [
+        "6. Sjekk post og legitimasjon",
+        "Kontroller at adressen din og postleveringen er som forventet. Kontakt Posten ved mistanke om uautorisert adresseendring. Meld mistet eller stjålet pass eller nasjonalt ID-kort til politiet etter deres veiledning."
+      ],
+      [
+        "Hvordan oppdager du ID-tyveri?",
+        "Ukjente kjøp, uventede kredittsjekker, nye kontoer du ikke har opprettet og varsler om endret adresse er mulige faresignaler. En enkelt uventet melding er ikke nødvendigvis bevis på ID-tyveri. Undersøk gjennom virksomhetens offisielle kanaler, ikke via lenker eller telefonnumre i meldingen."
+      ],
+      [
+        "Falske profiler og misbruk på nett",
+        "Rapporter profiler som utgir seg for å være deg til plattformen. Varsle gjerne kontakter som kan bli lurt av profilen. Slettmeg.no kan gi råd om fjerning av uønsket innhold og identitetsmisbruk på nettet."
+      ],
+      [
+        "Følg opp over tid",
+        "Før en enkel oversikt over hvem du har kontaktet og hvilke tiltak som er gjennomført. Følg med på bankkontoer, kredittvarsler og post også etter at den første hendelsen er håndtert. Vær skeptisk til personer som lover å skaffe tilbake penger mot betaling. Ved akutt fare, ring 112."
+      ]
+    ],
+    "links": [
+      [
+        "Politiet – råd ved svindel og ID-tyveri",
+        "https://www.politiet.no/rad/beskytt-deg-mot-svindel-og-id-tyveri"
+      ],
+      [
+        "Politiet – anmeld bedrageri og ID-tyveri",
+        "https://www.politiet.no/tjenester/anmelde/anmelde-svindel-og-id-tyveri"
+      ],
+      [
+        "Politiet – mistet pass eller ID-kort",
+        "https://www.politiet.no/tjenester/pass-og-id-kort/mistet-passet-eller-id-kortet"
+      ],
+      [
+        "Slettmeg.no",
+        "https://slettmeg.no/"
+      ],
+      [
+        "Nettvett.no",
+        "https://nettvett.no/"
+      ],
+      [
+        "Hjelp og ressurser",
+        "/ressurser/"
+      ]
+    ]
+  },
+  {
     "slug": "hvordan-slette-personopplysninger-pa-nettet",
     "publishedAt": "2026-11-26",
     "updatedAt": "2026-11-26",
