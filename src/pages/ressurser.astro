@@ -1,0 +1,26 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+const groups = [
+  { title: 'Trenger du hjelp?', items: [
+    ['Slettmeg.no', 'https://slettmeg.no/', 'Veiledning om uønsket innhold, falske profiler og krenkelser på nett.'],
+    ['Politiet', 'https://www.politiet.no/', 'Råd om svindel og ID-tyveri, og informasjon om anmeldelse.'],
+    ['Datatilsynet', 'https://www.datatilsynet.no/', 'Personvernrettigheter, veiledning og klagemuligheter.'],
+  ] },
+  { title: 'Digital sikkerhet og nettvett', items: [
+    ['Nettvett.no', 'https://nettvett.no/', 'Praktiske råd om trygg bruk av digitale tjenester.'],
+    ['Sikkert.no', 'https://sikkert.no/', 'Råd og informasjon om digital sikkerhet.'],
+    ['NorSIS', 'https://norsis.no/', 'Informasjon om digital sikkerhet.'],
+  ] },
+  { title: 'Barn, unge og forbrukere', items: [
+    ['Du bestemmer', 'https://www.dubestemmer.no/', 'Læringsressurser om personvern og digital dømmekraft.'],
+    ['Forbrukerrådet', 'https://www.forbrukerradet.no/', 'Veiledning om forbrukerrettigheter, også ved digitale tjenester.'],
+  ] },
+];
+---
+<SiteLayout title="Hjelp og ressurser" description="Finn norske ressurser for digitalt personvern, nettvett, svindel og hjelp ved nettkrenkelser.">
+  <h1>Hjelp og ressurser</h1>
+  <p class="lead">Du trenger ikke finne ut av alt selv. Her finner du norske fagmiljøer og tjenester som gir råd om personvern og digital sikkerhet.</p>
+  {groups.map(group => <section><h2>{group.title}</h2><div class="cards">{group.items.map(([name, url, description]) => <article class="card"><h3><a href={url} rel="noreferrer">{name}</a></h3><p>{description}</p></article>)}</div></section>)}
+  <p class="note">Lenkene går til eksterne nettsteder. Tenk deg om er ikke en del av disse tjenestene og mottar ingen betaling for henvisningene.</p>
+  <p><a href="/laer/">Les våre artikler om personvern</a></p>
+</SiteLayout>
