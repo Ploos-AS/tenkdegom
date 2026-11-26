@@ -582,7 +582,7 @@ export const articles = [
       ],
       [
         "Rett til dataportabilitet – artikkel 20",
-        "Når behandlingen er automatisert og bygger på samtykke eller avtale, kan du få ut opplysninger du har gitt i et strukturert, vanlig og maskinlesbart format. Dette kan omfatte data fra din bruk av en tjeneste, men ikke nødvendigvis virksomhetens egne analyser. Du kan også be om direkte overføring når det er teknisk mulig."
+        "Når behandlingen er automatisert og bygger på samtykke eller avtale, kan du få ut opplysninger du har gitt i et strukturert, vanlig og maskinlesbart format. Dette kan omfatte opplysninger du selv har gitt og visse observerte bruksdata, men ikke virksomhetens egne avledede analyser. Innsynsretten kan være relevant for slike analyser. Du kan også be om direkte overføring når det er teknisk mulig."
       ],
       [
         "Rett til å protestere – artikkel 21",
@@ -606,7 +606,7 @@ export const articles = [
       ],
       [
         "Svarfrist, kostnader og klage",
-        "Virksomheten skal normalt svare innen én måned. Ved komplekse eller mange forespørsler kan fristen forlenges med opptil to måneder, men du skal få beskjed og begrunnelse innen den første måneden. Rettighetene er som hovedregel gratis. Ved avslag skal virksomheten normalt forklare hvorfor og informere om klagemuligheter. Du kan klage til Datatilsynet."
+        "Virksomheten skal normalt svare innen én måned. Ved komplekse eller mange forespørsler kan fristen forlenges med opptil to måneder, men du skal få beskjed og begrunnelse innen den første måneden. Rettighetene er som hovedregel gratis. Ved avslag skal virksomheten normalt forklare hvorfor og informere om klagemuligheter. Du kan klage til Datatilsynet etter GDPR artikkel 77."
       ]
     ],
     "links": [
@@ -732,7 +732,7 @@ export const articles = [
       ],
       [
         "3. Dokumenter og anmeld",
-        "Lagre relevante meldinger, tidspunkt, fakturaer, transaksjoner og saksnumre. Anmeld identitetstyveriet så raskt som mulig. Bruk politiets veiledning for å finne riktig anmeldelseskanal; ta kontakt med politiet dersom du er usikker. Meld også fra til forsikringsselskapet dersom det er aktuelt."
+        "Lagre relevante meldinger, tidspunkt, fakturaer, transaksjoner og saksnumre. Anmeld identitetstyveriet så raskt som mulig. Politiets veiledning om ID-tyveri sier at du må møte opp hos politiet. Bedrageri og datakriminalitet kan anmeldes digitalt. Kontakt politiet dersom du er usikker på fremgangsmåten. Meld også fra til forsikringsselskapet dersom det er aktuelt."
       ],
       [
         "4. Opprett frivillig kredittsperre",
@@ -744,7 +744,7 @@ export const articles = [
       ],
       [
         "6. Sjekk post og legitimasjon",
-        "Kontroller at adressen din og postleveringen er som forventet. Kontakt Posten ved mistanke om uautorisert adresseendring. Meld mistet eller stjålet pass eller nasjonalt ID-kort til politiet etter deres veiledning."
+        "Kontroller at adressen din og postleveringen er som forventet. Kontakt Posten ved mistanke om uautorisert adresseendring. Meld mistet eller stjålet pass eller nasjonalt ID-kort til politiet så raskt som mulig ved personlig oppmøte. I utlandet kontakter du en norsk ambassade eller et konsulat."
       ],
       [
         "Hvordan oppdager du ID-tyveri?",
@@ -811,7 +811,7 @@ export const articles = [
       ],
       [
         "Google og Bing: Fjern søketreff, ikke selve nettsiden",
-        "Du kan be søkemotorene om å fjerne treff knyttet til navnet ditt. Dette kalles avindeksering og vurderes individuelt. Informasjonen kan fortsatt være tilgjengelig via andre søk eller direkte lenker. Kontakt derfor også nettstedet. Datatilsynets veiledning nedenfor viser hvor du finner skjemaene for Google og Bing. Dersom kilden allerede er fjernet, kan du be søkemotoren oppdatere utdaterte treff."
+        "Du kan be søkemotorene om å fjerne treff knyttet til navnet ditt. Dette kalles avindeksering og vurderes individuelt. Informasjonen kan fortsatt være tilgjengelig via andre søk eller direkte lenker. Fjerning av søketreff etter europeiske personvernregler innebærer ikke nødvendigvis global fjerning. Kontakt derfor også nettstedet. Datatilsynets veiledning nedenfor viser hvor du finner skjemaene for Google og Bing. Dersom kilden allerede er fjernet, kan du be søkemotoren oppdatere utdaterte treff."
       ],
       [
         "Gamle kontoer og profiler",
