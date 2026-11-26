@@ -1,5 +1,108 @@
 export const articles = [
   {
+    "slug": "hvilken-meldingstjeneste-beskytter-personvernet",
+    "publishedAt": "2026-11-26",
+    "updatedAt": "2026-11-26",
+    "title": "Hvilken meldingstjeneste beskytter personvernet ditt best?",
+    "intro": "Signal, WhatsApp, Telegram og andre meldingstjenester beskytter kommunikasjonen din på forskjellige måter. Her er ni alternativer og hva du bør se etter.",
+    "sections": [
+      [
+        "Kryptering og metadata",
+        "Ende-til-ende-kryptering beskytter meldingsinnholdet mellom deltakernes enheter. Metadata, som hvem du kommuniserer med og når, kan fortsatt avsløre mye. Kryptering beskytter heller ikke mot en kompromittert telefon eller at mottakeren deler meldingen."
+      ],
+      [
+        "Signal",
+        "Signal bruker ende-til-ende-kryptering som standard for meldinger og samtaler, har åpen kildekode og drives av en ideell organisasjon. Telefonnummer kreves ved registrering, men brukernavn kan redusere behovet for å dele nummeret med andre. Tjenesten er sentralisert og gratis."
+      ],
+      [
+        "WhatsApp",
+        "Metas meldingstjeneste bruker ende-til-ende-kryptering som standard for personlige meldinger og samtaler. Telefonnummer og metadata er fortsatt relevante personvernhensyn. Vurder særskilt sikkerhetskopier, bedriftskommunikasjon og hvordan mottakere håndterer opplysningene. Tjenesten er gratis for privat bruk."
+      ],
+      [
+        "Telegram",
+        "Vanlige skysamtaler og grupper er ikke ende-til-ende-kryptert. Hemmelige samtaler tilbyr slik kryptering mellom to personer, men fungerer annerledes enn vanlige skysamtaler. Telegram krever telefonnummer ved registrering og tilbyr gratis og betalte funksjoner."
+      ],
+      [
+        "Threema",
+        "En sveitsisk, betalt meldingstjeneste med ende-til-ende-kryptering og åpen kildekode i klientene. En Threema-ID kan brukes uten å knytte telefonnummer eller e-post til kontoen. Tjenesten har også egne bedriftsprodukter."
+      ],
+      [
+        "Element og Matrix",
+        "Matrix er en åpen, føderert kommunikasjonsstandard, og Element er en klient og tjenesteleverandør. Du kan velge server eller drifte din egen. Kryptering avhenger av romtype, klient og konfigurasjon; metadata kan deles mellom deltakende servere. Gratis og kommersielle løsninger finnes."
+      ],
+      [
+        "Session",
+        "En meldingstjeneste med åpen kildekode, distribuert infrastruktur og kontoidentifikatorer som ikke krever telefonnummer. Den er utviklet for å redusere eksponering av metadata. Undersøk kryptering og funksjoner for den aktuelle samtaletypen; distribuert drift er ikke en garanti for anonymitet."
+      ],
+      [
+        "SimpleX Chat",
+        "En åpen kildekodeløsning som bruker separate forbindelser fremfor en global, permanent brukeridentifikator. Telefonnummer er ikke nødvendig. Meldinger er ende-til-ende-kryptert, og egne meldingsreléer kan driftes. Personvernet avhenger også av enheten, nettverket og konfigurasjonen."
+      ],
+      [
+        "Facebook Messenger",
+        "Metas meldingstjeneste har innført ende-til-ende-kryptering som standard for personlige samtaler. Andre samtaletyper og integrasjoner kan ha andre egenskaper. Kontotilknytning, metadata og sikkerhetskopier er viktige hensyn."
+      ],
+      [
+        "iMessage",
+        "Apples meldingstjeneste bruker ende-til-ende-kryptering mellom kompatible Apple-enheter. Meldinger som sendes med andre protokoller, kan ha andre sikkerhetsegenskaper. Kontroller meldingstype og innstillinger for iCloud og sikkerhetskopiering. Tjenesten er integrert i Apples økosystem."
+      ],
+      [
+        "Sikkerhetskopier og gjenoppretting",
+        "Undersøk om sikkerhetskopier er ende-til-ende-kryptert, hvem som har tilgang til nøklene, og hvordan du gjenoppretter meldinger ved tap av telefonen. Bruk skjermlås, oppdateringer og sikker kontogjenoppretting. Ikke anta at alle sikkerhetskopier har samme beskyttelse som selve samtalen."
+      ],
+      [
+        "Hva bør du velge?",
+        "Signal er et godt utgangspunkt for enkel, privat kommunikasjon. Threema, Session og SimpleX er interessante når telefonnummer ikke bør være nødvendig. Matrix passer for dem som ønsker åpne standarder og egen drift. WhatsApp og iMessage kan være praktiske når kontaktene allerede bruker dem. Vurder hvem du faktisk trenger å kommunisere med, og hvilke trusler du ønsker beskyttelse mot. Vi har ikke utført egne sikkerhetsrevisjoner eller produkttester."
+      ]
+    ],
+    "links": [
+      [
+        "Signal",
+        "https://signal.org/"
+      ],
+      [
+        "WhatsApp",
+        "https://www.whatsapp.com/"
+      ],
+      [
+        "Telegram",
+        "https://telegram.org/"
+      ],
+      [
+        "Threema",
+        "https://threema.ch/"
+      ],
+      [
+        "Matrix",
+        "https://matrix.org/"
+      ],
+      [
+        "Element",
+        "https://element.io/"
+      ],
+      [
+        "Session",
+        "https://getsession.org/"
+      ],
+      [
+        "SimpleX Chat",
+        "https://simplex.chat/"
+      ],
+      [
+        "Messenger",
+        "https://www.messenger.com/"
+      ],
+      [
+        "Apple – brukerstøtte",
+        "https://support.apple.com/no-no"
+      ],
+      [
+        "Les også: Beskytt kontoene dine",
+        "/laer/beskytt-kontoene-dine/"
+      ]
+    ]
+  },
+  {
     "slug": "hvilken-passordadministrator-bor-du-velge",
     "publishedAt": "2026-11-26",
     "updatedAt": "2026-11-26",
