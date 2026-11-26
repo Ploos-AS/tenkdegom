@@ -1,5 +1,92 @@
 export const articles = [
   {
+    "slug": "hvilke-rettigheter-har-du-etter-gdpr",
+    "publishedAt": "2026-11-26",
+    "updatedAt": "2026-11-26",
+    "title": "Hvilke rettigheter har du etter GDPR?",
+    "intro": "Personvernforordningen (GDPR) gir deg rettigheter når virksomheter behandler personopplysninger om deg. Her er en praktisk oversikt over hva du kan be om.",
+    "sections": [
+      [
+        "Rett til informasjon – artikkel 12–14",
+        "Du skal få forståelig informasjon om blant annet formålet med behandlingen, behandlingsgrunnlaget, mottakere og lagringstid. Se etter personvernerklæringen når du registrerer deg for en tjeneste."
+      ],
+      [
+        "Rett til innsyn – artikkel 15",
+        "Du kan be om en kopi av personopplysningene en virksomhet behandler om deg, og informasjon om hvordan de brukes. Eksempel: Be en nettbutikk om innsyn i opplysningene knyttet til kundeprofilen din. Det finnes unntak, blant annet av hensyn til andres rettigheter."
+      ],
+      [
+        "Rett til retting – artikkel 16",
+        "Du kan kreve at uriktige personopplysninger rettes, og at ufullstendige opplysninger suppleres når det er relevant. Eksempel: Be en virksomhet korrigere feil kontaktinformasjon."
+      ],
+      [
+        "Rett til sletting – artikkel 17",
+        "Du kan kreve sletting når vilkårene er oppfylt, for eksempel når opplysningene ikke lenger er nødvendige. Retten er ikke absolutt; lovpålagt oppbevaring og ytringsfrihet kan blant annet gi grunnlag for unntak."
+      ],
+      [
+        "Rett til begrensning – artikkel 18",
+        "I bestemte situasjoner kan du be om at bruken av opplysningene begrenses, for eksempel mens virksomheten undersøker om opplysninger du bestrider er riktige. Opplysningene kan fortsatt lagres, men annen bruk er som hovedregel begrenset."
+      ],
+      [
+        "Rett til dataportabilitet – artikkel 20",
+        "Når behandlingen er automatisert og bygger på samtykke eller avtale, kan du få ut opplysninger du har gitt i et strukturert, vanlig og maskinlesbart format. Dette kan omfatte data fra din bruk av en tjeneste, men ikke nødvendigvis virksomhetens egne analyser. Du kan også be om direkte overføring når det er teknisk mulig."
+      ],
+      [
+        "Rett til å protestere – artikkel 21",
+        "Ved direkte markedsføring kan du protestere uten å begrunne det, og slik bruk må opphøre. Ved behandling basert på berettiget interesse eller oppgaver i allmennhetens interesse kan du protestere med grunnlag i din situasjon. Virksomheten kan i visse tilfeller ha tungtveiende grunner til å fortsette."
+      ],
+      [
+        "Automatiserte avgjørelser – artikkel 22",
+        "Som hovedregel skal du ikke bli gjenstand for en avgjørelse som er helt automatisert og har rettsvirkning eller tilsvarende betydelig innvirkning på deg. Det finnes unntak. Ved unntak basert på avtale eller uttrykkelig samtykke har du blant annet rett til menneskelig gjennomgang og til å bestride avgjørelsen."
+      ],
+      [
+        "Trekk tilbake samtykke – artikkel 7",
+        "Hvis behandlingen bygger på samtykke, kan du trekke det tilbake. Det skal være like enkelt å trekke samtykket tilbake som å gi det. Tilbaketrekkingen gjør ikke tidligere lovlig behandling ulovlig, og opplysninger kan fortsatt behandles dersom det finnes et annet gyldig grunnlag."
+      ],
+      [
+        "Slik bruker du rettighetene dine",
+        "Kontakt virksomheten som er ansvarlig for behandlingen. Beskriv hva du ønsker, og hvilken konto eller behandling det gjelder. Du trenger normalt ikke bruke et bestemt skjema. Virksomheten kan be om nødvendig identitetsbekreftelse. Bruk en sikker kanal for sensitiv informasjon."
+      ],
+      [
+        "Eksempel på innsynsforespørsel",
+        "Hei. Jeg ber om innsyn etter GDPR artikkel 15 i personopplysninger dere behandler om meg, inkludert en kopi av opplysningene og informasjon om formål, mottakere, lagringstid og hvor opplysningene kommer fra. Vennligst opplys om hvordan jeg kan bekrefte identiteten min på en sikker måte dersom det er nødvendig."
+      ],
+      [
+        "Svarfrist, kostnader og klage",
+        "Virksomheten skal normalt svare innen én måned. Ved komplekse eller mange forespørsler kan fristen forlenges med opptil to måneder, men du skal få beskjed og begrunnelse innen den første måneden. Rettighetene er som hovedregel gratis. Ved avslag skal virksomheten normalt forklare hvorfor og informere om klagemuligheter. Du kan klage til Datatilsynet."
+      ]
+    ],
+    "links": [
+      [
+        "Datatilsynet – Rett til informasjon",
+        "https://www.datatilsynet.no/rettigheter-og-plikter/den-registrertes-rettigheter/rett-til-informasjon/"
+      ],
+      [
+        "Datatilsynet – Rett til innsyn",
+        "https://www.datatilsynet.no/rettigheter-og-plikter/den-registrertes-rettigheter/rett-til-innsyn/"
+      ],
+      [
+        "Datatilsynet – Dataportabilitet",
+        "https://www.datatilsynet.no/rettigheter-og-plikter/den-registrertes-rettigheter/rett-til-dataportabilitet/"
+      ],
+      [
+        "Datatilsynet – Rett til å protestere",
+        "https://www.datatilsynet.no/rettigheter-og-plikter/den-registrertes-rettigheter/rett-til-a-protestere/"
+      ],
+      [
+        "Datatilsynet – Automatiserte avgjørelser",
+        "https://www.datatilsynet.no/rettigheter-og-plikter/den-registrertes-rettigheter/rettar-ved-automatiserte-avgjerder/"
+      ],
+      [
+        "Les også: Hvordan slette personopplysninger om deg selv på nettet?",
+        "/laer/hvordan-slette-personopplysninger-pa-nettet/"
+      ],
+      [
+        "Hjelp og ressurser",
+        "/ressurser/"
+      ]
+    ]
+  },
+  {
     "slug": "slik-avslorer-du-digital-svindel",
     "publishedAt": "2026-11-26",
     "updatedAt": "2026-11-26",
